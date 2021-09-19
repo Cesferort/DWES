@@ -9,7 +9,10 @@
         "Ciudad2",
         "Ciudad5",
         "Ciudad3",
-        "Ciudad7"
+        "Ciudad7",
+        "Ciudad8",
+        "Ciudad4",
+        "Ciudad1"
     );
     
     $listaCiudades = array_unique($listaCiudades);

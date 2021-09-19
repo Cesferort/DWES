@@ -28,7 +28,12 @@
         <?php 
             $listaURL = devolverEnlaces();
             foreach($listaURL as $url)
-                echo "<p>$url</p><br>";
+            {
+                $urlSeccionada = explode(" - ", $url);
+                $nomURL=$urlSeccionada[0];
+                $dirURL=$urlSeccionada[1];
+                echo "<a href='$dirURL' target='_blank'>$nomURL</a><br>";
+            }
         ?>
     </ol>
 </body>

@@ -38,7 +38,7 @@
         for($numPeli=0;$numPeli<2;)
         {
             $numPeliRandom = rand(0,count($listaPelis)-1);
-            if(!isset($listaPelisRandom[$numPeliRandom]))
+            if(!in_array($numPeliRandom, $listaPelisRandom))
             {
                 $listaPelisRandom[$numPeli] = $numPeliRandom;
                 $numPeli++;
