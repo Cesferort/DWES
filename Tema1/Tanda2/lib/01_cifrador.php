@@ -5,24 +5,75 @@ function cifrarCesar($txtACifrar,$desplazamiento)
     for($i=0;$i<strlen($txtACifrar);$i++)
     {
         $character = ord($txtACifrar[$i]);
-        $esMayus=false;
-        if($character >= ord('A') and $character <= ord('Z'))
-            $esMayus=true;
 
-        $newCharacter=$character+$desplazamiento;
-        if($esMayus==true and $newCharacter > ord('Z'))
-            $newCharacter=$newCharacter - (ord('Z')-ord('A')+1);
-        else if($esMayus==false and $newCharacter > ord('z'))
-            $newCharacter=$newCharacter - (ord('Z')-ord('A')+1);
+        $esMayus=null;          // Caracter especial
+        if($character >= ord('A') and $character <= ord('Z'))
+        {
+            $esMayus=true;      // Caracter mayúscula
+            $newCharacter=$character+$desplazamiento;
+
+            if($esMayus==true and $newCharacter > ord('Z'))
+                $newCharacter=$newCharacter - (ord('Z')-ord('A')+1);
+            else if($esMayus==false and $newCharacter > ord('z'))
+                $newCharacter=$newCharacter - (ord('z')-ord('a')+1);
+        }
+        elseif($character >= ord('a') and $character <= ord('z'))
+        {
+            $esMayus=false;     // Caracter minúscula
+            $newCharacter=$character+$desplazamiento;
+
+            if($esMayus==true and $newCharacter > ord('Z'))
+                $newCharacter=$newCharacter - (ord('Z')-ord('A')+1);
+            else if($esMayus==false and $newCharacter > ord('z'))
+                $newCharacter=$newCharacter - (ord('z')-ord('a')+1);
+        }
+        else
+            $newCharacter=$character;
 
         $result.=chr($newCharacter);
     }
 
-    echo "<strong>Texto cifrado: ".$result."</strong>";
+    return "<strong>Texto cifrado: ".$result."</strong>";
 }
+
 function cifrarSustitucion($txtACifrar,$ficheroClave)
 {
     $result="";
-    echo "<strong>Texto cifrado: ".$result."</strong>";
+
+    $linea="";
+    $handle = fopen($ficheroClave, "r");
+    while(!feof($handle)) 
+        $linea = fgets($handle); 
+    fclose($handle);
+
+    if($linea=="")
+        return "<p>*El fichero de clave utilizado para cifrar no tiene contenido. Prueba con otro fichero</p>";
+    else
+    {
+        for($i=0;$i<strlen($txtACifrar);$i++)
+        {
+            $character = ord($txtACifrar[$i]);
+
+            if($character >= ord('A') and $character <= ord('Z'))
+            {
+                // Caracter mayúscula
+                $diferencia=$character-ord('A');
+                $result.=$linea[$diferencia];
+            }    
+            elseif($character >= ord('a') and $character <= ord('z'))
+            {
+                // Caracter minúscula
+                $diferencia=$character-ord('a');
+                $result.=$linea[$diferencia];
+            } 
+            else
+            {
+                // Caracter especial
+                $result.=$character;
+            }
+        }
+
+        return "<strong>Texto cifrado: ".$result."</strong>";
+    }
 }
 ?>

@@ -17,30 +17,35 @@
         10
     );
 
-
+    $cifradoCompletado=false;
+    $cifradoCompletado_Txt="";
+    $txtACifrar="";
     if(!empty($_GET['txtACifrar']) and (isset($_GET['desplazamiento']) and isset($_GET['cifradoCesar'])))
     {
         $txtACifrar=$_GET['txtACifrar'];
         $desplazamiento=$_GET['desplazamiento'];
 
-        cifrarCesar($txtACifrar,$desplazamiento);
+        $cifradoCompletado_Txt=cifrarCesar($txtACifrar,$desplazamiento);
+        $cifradoCompletado=true;
     }
     else if(!empty($_GET['txtACifrar']) and (isset($_GET['ficheroClave']) and isset($_GET['cifradoSusti'])))
     {
         $txtACifrar=$_GET['txtACifrar'];
-        $ficheroClave=$_GET['ficheroClave'];
+        $ficheroClave=DIR.$_GET['ficheroClave'];
 
-        cifrarSustitucion($txtACifrar,$ficheroClave);
+        $cifradoCompletado_Txt=cifrarSustitucion($txtACifrar,$ficheroClave);
+        $cifradoCompletado=true;
     }
-    else
-    {
 ?>
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
         <table>
             <tr>
                 <td>Texto a cifrar</td>
                 <td>
-                    <input type="text" name="txtACifrar"/>
+                    <input type="text" name="txtACifrar" 
+                    value="<?php 
+                                echo($txtACifrar!='')? $txtACifrar : '';
+                            ?>"/>
                 </td>
                 <?php
                     if((isset($_GET['cifradoCesar']) or isset($_GET['cifradoSusti'])) and empty($_GET['txtACifrar']))
@@ -51,6 +56,7 @@
                 <td>Desplazamiento</td>
                 <td>
                 <?php
+                    # TODO Conservar valor elegido entre radio buttons en caso de que se haya elegido uno
                     foreach($arrDespla as $radioDespla)
                         echo "<input type = 'radio' name = 'desplazamiento' value = '".$radioDespla."'/>".$radioDespla;
                 ?>
@@ -91,9 +97,14 @@
                 ?>
             </tr>
         </table>
+        <?php
+            if($cifradoCompletado==true)
+                echo "<br>".$cifradoCompletado_Txt;
+        ?>
     </form>
 <?php
-    }
+    $cifradoCompletado=false;
+    $cifradoCompletado_Txt="";
 ?>
 </body>
 </html>
