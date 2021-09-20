@@ -8,50 +8,89 @@
 </head>
 <body>
 <?php
-    $nombre="";
-    $arrModulos=array();
+    require_once('lib/01_cifrador.php');
+    define("DIR","./files/");
+    $arrDespla = array
+    (
+        3,
+        5,
+        10
+    );
 
-    if(!empty($_POST['nombre']))
+
+    if(!empty($_GET['txtACifrar']) and (isset($_GET['desplazamiento']) and isset($_GET['cifradoCesar'])))
     {
-        $nombre = $_POST['nombre'];
+        $txtACifrar=$_GET['txtACifrar'];
+        $desplazamiento=$_GET['desplazamiento'];
 
-        echo "<p>Datos introducidos correctamente</p>";
-        echo "Nombre:".$nombre."<br>";
+        cifrarCesar($txtACifrar,$desplazamiento);
+    }
+    else if(!empty($_GET['txtACifrar']) and (isset($_GET['ficheroClave']) and isset($_GET['cifradoSusti'])))
+    {
+        $txtACifrar=$_GET['txtACifrar'];
+        $ficheroClave=$_GET['ficheroClave'];
+
+        cifrarSustitucion($txtACifrar,$ficheroClave);
     }
     else
     {
 ?>
-    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
         <table>
             <tr>
                 <td>Texto a cifrar</td>
                 <td>
-                    <input type="text" name="txtACifrar"
-                        value="<?php echo $txtACifrar;?>"/>
+                    <input type="text" name="txtACifrar"/>
                 </td>
+                <?php
+                    if((isset($_GET['cifradoCesar']) or isset($_GET['cifradoSusti'])) and empty($_GET['txtACifrar']))
+                        echo "<td>*Debes introducir un texto</td>";
+                ?>
             </tr>
             <tr>
                 <td>Desplazamiento</td>
                 <td>
-
+                <?php
+                    foreach($arrDespla as $radioDespla)
+                        echo "<input type = 'radio' name = 'desplazamiento' value = '".$radioDespla."'/>".$radioDespla;
+                ?>
                 </td>
-                <td></td>                
+                <td>
+                    <input type="submit" value="CIFRADO CESAR" name="cifradoCesar"/>
+                </td>   
+                <?php
+                    if(isset($_GET['cifradoCesar']) and !isset($_GET['desplazamiento']))
+                        echo "<td>*Debes indicar un desplazamiento</td>";
+                ?>     
             </tr>
             <tr>
                 <td>Fichero de clave</td>
                 <td>
-
+                    <select name="ficheroClave">
+                        <?php
+                            if(file_exists(DIR))
+                            {
+                                $files=scandir(DIR);
+                                foreach($files as $f)
+                                {
+                                    if(is_file(DIR.$f))
+                                        echo "<option>$f</option>";
+                                }
+                            }
+                            else
+                                echo "*La carpeta contenedora de ficheros de clave no existe";
+                        ?>
+                    </select>
                 </td>
-                <td></td>
+                <td>
+                    <input type="submit" value="CIFRADO POR SUSTITUCION" name="cifradoSusti"/>
+                </td> 
+                <?php
+                    if(isset($_GET['cifradoSusti']) and !isset($_GET['ficheroClave']))
+                        echo "<td>*No se han podido encontrar ficheros de clave</td>";
+                ?>
             </tr>
         </table>
-        <input type="text" name="nombre"
-            value="<?php echo $nombre;?>"/>
-        <?php
-            if(isset($_POST['enviar'])&&(!isset($_POST['nombre'])))
-                echo "<span>Mierda</span>";
-        ?>
-        <input type="submit" value="Enviar" name="enviar"/>
     </form>
 <?php
     }
