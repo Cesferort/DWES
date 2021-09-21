@@ -20,6 +20,10 @@
     $cifradoCompletado=false;
     $cifradoCompletado_Txt="";
     $txtACifrar="";
+    $desplazamiento="";
+    if(isset($_GET['desplazamiento']))
+        $desplazamiento=$_GET['desplazamiento'];
+
     if(!empty($_GET['txtACifrar']) and (isset($_GET['desplazamiento']) and isset($_GET['cifradoCesar'])))
     {
         $txtACifrar=$_GET['txtACifrar'];
@@ -56,9 +60,14 @@
                 <td>Desplazamiento</td>
                 <td>
                 <?php
-                    # TODO Conservar valor elegido entre radio buttons en caso de que se haya elegido uno
                     foreach($arrDespla as $radioDespla)
-                        echo "<input type = 'radio' name = 'desplazamiento' value = '".$radioDespla."'/>".$radioDespla;
+                    {
+                        if(intval($desplazamiento)==intval($radioDespla))
+                            echo "<input type = 'radio' name = 'desplazamiento' checked value = '".$radioDespla."'/>".$radioDespla;
+                        else   
+                            echo "<input type = 'radio' name = 'desplazamiento' value = '".$radioDespla."'/>".$radioDespla;
+                        echo "<br>";    
+                    }
                 ?>
                 </td>
                 <td>
@@ -105,6 +114,7 @@
 <?php
     $cifradoCompletado=false;
     $cifradoCompletado_Txt="";
+    $desplazamiento="";
 ?>
 </body>
 </html>
