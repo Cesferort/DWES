@@ -11,11 +11,27 @@
         <h1>Ejercicios Tanda 2</h1>
     </header>
     <ul>
-        <li><a href="01.php">Ejercicio1</a></li>
-        <li><a href="02.php">Ejercicio2</a></li>
-        <li><a href="03.php">Ejercicio3</a></li>
-        <li><a href="04.php">Ejercicio4</a></li>
-        <li><a href="05.php">Ejercicio5</a></li>
+        <?php
+            $directories=scandir('./');
+            foreach($directories as $dir)
+            {
+                if(is_dir($dir))
+                {
+                    $url='./'.$dir;
+                    $files=scandir($url);
+                    $nEjercicio=1;
+                    foreach($files as $f)
+                    {
+                        $url.='/'.$f;
+                        if(is_file($url) and $f!='index.php')
+                        {
+                            echo '<li><a href="'.$url.'">Ejercicio '.$nEjercicio.'</a></li>';
+                            $nEjercicio++;
+                        }
+                    } 
+                }
+            }
+        ?>
     </ul>
 </body>
 </html>
