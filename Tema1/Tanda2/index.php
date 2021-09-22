@@ -13,19 +13,19 @@
     <ul>
         <?php
             $directories=scandir('./');
+            $nEjercicio=1;
             foreach($directories as $dir)
             {
                 if(is_dir($dir))
                 {
                     $url='./'.$dir;
                     $files=scandir($url);
-                    $nEjercicio=1;
+                   
                     foreach($files as $f)
                     {
-                        $url.='/'.$f;
-                        if(is_file($url) and $f!='index.php')
+                        if(is_file($url.'/'.$f) and $f!='index.php' and strpos($f,'.php')!==false)  
                         {
-                            echo '<li><a href="'.$url.'">Ejercicio '.$nEjercicio.'</a></li>';
+                            echo '<li><a href="'.$url."/".$f.'">Ejercicio '.$nEjercicio.'</a></li>';
                             $nEjercicio++;
                         }
                     } 

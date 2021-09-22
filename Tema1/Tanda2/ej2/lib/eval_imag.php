@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    
     function conseguirImgsRand()
     {
         if(isset($_GET['nImagenes']))
         {
-            $txtACifrar=$_GET['txtACifrar'];
-            $desplazamiento=$_GET['desplazamiento'];
-
-            $cifradoCompletado_Txt=cifrarCesar($txtACifrar,$desplazamiento);
-            $cifradoCompletado=true;
+            $nImagenes=$_GET['nImagenes'];
+            /**
+             * TODO Buscar imágenes posibles, comprobar que tenemos 
+             * suficientes. Aleatorizar resultados y mostrar resultados.
+             */
         }
     }
 ?>
