@@ -14,17 +14,13 @@ function cifrarCesar($txtACifrar,$desplazamiento)
 
             if($esMayus==true and $newCharacter > ord('Z'))
                 $newCharacter=$newCharacter - (ord('Z')-ord('A')+1);
-            else if($esMayus==false and $newCharacter > ord('z'))
-                $newCharacter=$newCharacter - (ord('z')-ord('a')+1);
         }
         elseif($character >= ord('a') and $character <= ord('z'))
         {
             $esMayus=false;     // Caracter minúscula
             $newCharacter=$character+$desplazamiento;
 
-            if($esMayus==true and $newCharacter > ord('Z'))
-                $newCharacter=$newCharacter - (ord('Z')-ord('A')+1);
-            else if($esMayus==false and $newCharacter > ord('z'))
+            if($esMayus==false and $newCharacter > ord('z'))
                 $newCharacter=$newCharacter - (ord('z')-ord('a')+1);
         }
         else
