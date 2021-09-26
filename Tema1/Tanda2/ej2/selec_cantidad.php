@@ -8,29 +8,39 @@
 </head>
 <body>
 <?php
-    define("DIR","./imagenes/");
+    define("DIRIMG","./imagenes/");
+
+    function cuantasImag()
+    {
+        $arrext=array("jpg","png","tiff","jpeg");
+        $contImag=0;
+
+        if(file_exists(DIRIMG))
+        {
+            $files=scandir(DIRIMG);
+            foreach($files as $f)
+            {
+                if(is_file(DIRIMG.$f))
+                {
+                    $fSeccionado = explode('.', $f);
+                    $ext=$fSeccionado[1];
+                    if(in_array($ext, $arrext))
+                        $contImag++;
+                }
+            }
+        }
+        else
+            echo "*La carpeta contenedora de imágenes no existe";
+        return $contImag;
+    }
 ?>
     <form action="./lib/eval_imag.php" method="get">
         <label for="nImagenes">¿Cuántas imágenes quieres ver?</label>    
         <select name="nImagenes" id="nImagenes">
             <?php
-                if(file_exists(DIR))
-                {
-                    $files=scandir(DIR);
-                    $contImg=1;
-                    echo "<option>2</option>";
-                    foreach($files as $f)
-                    {
-                        if(is_file(DIR.$f))
-                        {
-                            if($contImg>2)
-                                echo "<option>$contImg</option>";
-                            $contImg++;
-                        }
-                    }
-                }
-                else
-                    echo "*La carpeta contenedora de imágenes no existe";
+                $contImag=cuantasImag();
+                for($nImag=2;$nImag<=$contImag;$nImag++)
+                    echo "<option>$nImag</option>";
             ?>
         </select>
         <br>
