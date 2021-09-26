@@ -87,7 +87,6 @@ else
         fwrite($f,$linea); 
 
         fclose($f);
-        
     }
     else
         echo '<p>Sentimos que no le haya gustado ninguna</p>';
