@@ -18,14 +18,14 @@ if(isset($_GET['err']))
                 <td>
                     <input type="text" name="nomUser">
                 </td>
-                <td rowspan=2>
-                    <input type="submit" value="ENTRAR" name="login">
-                </td>
             </tr>
             <tr>
                 <td>Contraseña:</td>
                 <td>
                     <input type="password" name="passUser">
+                </td>
+                <td>
+                    <input type="submit" value="ENTRAR" name="login">
                 </td>
             </tr>
         </table>
