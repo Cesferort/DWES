@@ -1,6 +1,5 @@
 <?php
 $GLOBALS['DIR']='../files/usuarios.txt';
-
 if(isset($_POST['login']))
 {
     $nomUser=$_POST['nomUser'];
@@ -22,7 +21,7 @@ function login($nomUser_Check,$passUser_Check)
             if(count($lineaSeccionada)==2)
             {
                 $nomUser=$lineaSeccionada[0];
-                if($nomUser_Check==$nomUser)
+                if(trim($nomUser_Check)==trim($nomUser))
                 {
                     // Comprobando validez de la contraseña
                     $passUser=$lineaSeccionada[1];
@@ -37,20 +36,18 @@ function login($nomUser_Check,$passUser_Check)
 
         // 1 - Login Correcto
         if($userFound==true && $correctPassword==true)
-        {
-            
-        }
+            header('Location: ./charla.php?nomUser='.$nomUser_Check);
 
         // 2 - Usuario encontrado, Contraseña Incorrecta
         else if($userFound==true && $correctPassword==false)
             header('Location: ../login.php?err='.$nomUser_Check);
 
         // 3 - Usuario no encontrado
-        else if($userFound==false);
+        else if($userFound==false)
+            header('Location: ./alta.php?nomUser='.$nomUser_Check);;
 
     }
     else
         echo "(*)Ha ocurrido un error accediendo al archivo contenedor de información sobre usuarios";
-
 }
 ?>
