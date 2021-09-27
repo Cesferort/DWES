@@ -12,8 +12,8 @@ if(isset($_GET['err']))
     echo '<p>CONTRASEÑA ERRÓNEA PARA: <strong>'.$_GET['err'].'</strong></p>';
 ?>
     <form enctype="multipart/form-data" action="./lib/validacion.php" method="post">
-         <table>
-             <tr>
+        <table>
+            <tr>
                 <td>Nombre de usuario:</td>
                 <td>
                     <input type="text" name="nomUser">
@@ -21,14 +21,14 @@ if(isset($_GET['err']))
                 <td rowspan=2>
                     <input type="submit" value="ENTRAR" name="login">
                 </td>
-             </tr>
-             <tr>
+            </tr>
+            <tr>
                 <td>Contraseña:</td>
                 <td>
                     <input type="password" name="passUser">
                 </td>
-             </tr>
-         </table>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
