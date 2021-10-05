@@ -1,0 +1,5 @@
+Plato1 Primero 20
+Empanada Segundo 10
+Tarta Postres 30
+Plato4 Segundo 5
+Ensalada Primero 7
