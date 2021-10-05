@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
 </head>
+<?php
+$loginValido=true;
+if(isset($_GET["errLogin"]))
+    $loginValido=false;
+?>
+<style>.rojo{color:red;}</style>
 <body>
+    <?php
+    if($loginValido==false)
+        echo"<p class='rojo'>Combinación errónea de usuario-password</p>";
+    ?>
     <p>Si eres SOCIO, introduce tu usuario y password</p>
     <form action="./lib/autenticacion.php" method="post">
         <table>
