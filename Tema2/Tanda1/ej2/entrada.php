@@ -7,6 +7,10 @@
     <title>Entrada</title>
 </head>
 <?php
+// Comprobamos si la página tiene un error adjunto que representa un fallo de inicio de sesión.
+// Este fallo podría ocurrir alguna de las siguientes razones: 
+// 1) Datos de inicio de sesión incorrectos 
+// 2) Se ha intentado acceder a una página de usuario sin haber iniciado sesión anteriormente
 $loginValido=true;
 if(isset($_GET["errLogin"]))
     $loginValido=false;
@@ -14,6 +18,7 @@ if(isset($_GET["errLogin"]))
 <style>.rojo{color:red;}</style>
 <body>
     <?php
+    // Mostramos en pantalla un error en caso de que el inicio de sesión haya sido incorrecto
     if($loginValido==false)
         echo"<p class='rojo'>Combinación errónea de usuario-password</p>";
     ?>
