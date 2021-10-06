@@ -14,6 +14,11 @@
 $loginValido=true;
 if(isset($_GET["errLogin"]))
     $loginValido=false;
+
+// Buscamos si existe un último usuario guardado en la cookie
+$ultimoUsuario="";
+if(isset($_COOKIE["ultimoUsuario"]))
+    $ultimoUsuario=$_COOKIE["ultimoUsuario"];
 ?>
 <style>.rojo{color:red;}</style>
 <body>
@@ -28,7 +33,7 @@ if(isset($_GET["errLogin"]))
             <tr>
                 <td>USUARIO:</td>
                 <td>
-                    <input type="text" name="nomUser" id="nomUser">
+                    <input type="text" name="nomUser" id="nomUser" value="<?php echo $ultimoUsuario;?>">
                 </td>
             </tr>
             <tr>

@@ -15,6 +15,8 @@ if(isset($_POST["login"]))
         $_SESSION['nomUser']=$user;
         $_SESSION['dctoUser']=dameDcto($user);
         $_SESSION['esInvitado']=false;
+        // Guardamos útimo usuario en cookie
+        setcookie('ultimoUsuario',$user);
         header('Location: ./pedido.php');
     }
     else
