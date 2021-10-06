@@ -1,5 +1,9 @@
 Plato1 Primero 20
+Plato2 Primero 21
 Empanada Segundo 10
-Tarta Postres 30
+Tarta Postre 30
 Plato4 Segundo 5
 Ensalada Primero 7
+Agua Bebida 40
+Vino Bebida 19
+Pastel Postre 4

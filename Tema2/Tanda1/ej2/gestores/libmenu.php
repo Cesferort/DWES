@@ -48,7 +48,7 @@ function dameDcto($user)
             }
         }
         fclose($f);
-        return -1;
+        return 0;
     }
 }
 
@@ -97,6 +97,6 @@ function damePrecio($plato)
         }
         fclose($f);
     }
-    return -1;
+    return 0;
 }
 ?>
