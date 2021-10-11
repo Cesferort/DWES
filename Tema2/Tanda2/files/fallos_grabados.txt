@@ -1,0 +1,25 @@
+
+Tipo: GEOGRAFIA
+Pregunta: ¿Pregunta1?
+Respuesta Correcta: Respuesta Correcta
+Respuesta Ofrecida: NINGUNA
+
+Tipo: CINE
+Pregunta: ¿Pregunta1?
+Respuesta Correcta: Respuesta Correcta
+Respuesta Ofrecida: Respuesta Erronea2
+
+Tipo: CINE
+Pregunta: ¿Pregunta2?
+Respuesta Correcta: Respuesta Correcta
+Respuesta Ofrecida: Respuesta Erronea1
+
+Tipo: CIENCIAS
+Pregunta: ¿Pregunta5?
+Respuesta Correcta: Respuesta Correcta
+Respuesta Ofrecida: Respuesta Erronea1
+
+Tipo: CIENCIAS
+Pregunta: ¿Pregunta1?
+Respuesta Correcta: Respuesta Correcta
+Respuesta Ofrecida: Respuesta Erronea2
