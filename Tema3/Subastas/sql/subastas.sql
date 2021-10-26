@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 26-10-2021 a las 01:52:27
+-- Tiempo de generación: 26-10-2021 a las 09:17:13
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -58,7 +58,21 @@ CREATE TABLE IF NOT EXISTS `imagen` (
   PRIMARY KEY (`id`),
   KEY `id_item` (`id_item`),
   KEY `id_item_2` (`id_item`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `imagen`
+--
+
+INSERT INTO `imagen` (`id`, `id_item`, `imagen`) VALUES
+(1, 57, 'blood_machines.jpg'),
+(2, 57, 'blood_machines.jpg'),
+(3, 63, ''),
+(4, 60, 'estrella_rosa.jpg'),
+(5, 62, 'hotline_miami_collection.jpg'),
+(6, 59, 'insignia_KGB.jpg'),
+(7, 61, 'russia_battlegrounds.jpg'),
+(8, 58, 'snatch.jpg');
 
 -- --------------------------------------------------------
 
@@ -78,7 +92,20 @@ CREATE TABLE IF NOT EXISTS `item` (
   PRIMARY KEY (`id`),
   KEY `id_cat` (`id_cat`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `item`
+--
+
+INSERT INTO `item` (`id`, `id_cat`, `id_user`, `nombre`, `preciopartida`, `descripcion`, `fechafin`) VALUES
+(57, 1, 1, 'Blood Machines', 4.2, 'An artificial intelligence escapes her spaceship to turn into a female ghost and challenges two blade runners to a galactic chase.', '2021-10-26 09:20:11'),
+(58, 1, 4, 'Snatch', 52, 'Snatch (stylized as snatch.) is a 2000 British-American crime comedy film written and directed by Guy Ritchie, featuring an ensemble cast.', '2021-10-26 09:20:11'),
+(59, 2, 3, 'Insignia de Oro soviética de la KGB', 250, 'It is Excellent Gift For Anyone Who Loves WW1/WW2 era or For Collectors.', '2021-10-26 09:25:43'),
+(60, 2, 7, 'Estrella Rosa', 60000000, 'The Pink Star, formerly known as the Steinmetz Pink,[1] is a diamond weighing 59.60 carat (11.92 g), rated in color as Fancy Vivid Pink by the Gemological Institute of America.', '2021-10-26 09:28:36'),
+(61, 4, 3, 'Russia Battlegrounds', 2, 'RUSSIA BATTLEGROUNDS is a multiplayer battle royale shooter and your trip to hell. Here start\'s battle of unarmed prisoners, in which the strongest wins.', '2021-10-26 09:34:21'),
+(62, 4, 1, 'Hotline Miami Collection', 15, 'Hotline Miami Collection contains both legendary games in the neon-soaked, brutally-challenging Hotline Miami series from Dennaton Games.', '2021-10-26 09:35:25'),
+(63, 3, 1, 'Esta Mierda de Ejercicio', 1, '50% PHP + 50% HTML = 100% Mierda', '2021-10-26 10:12:43');
 
 -- --------------------------------------------------------
 
@@ -96,7 +123,15 @@ CREATE TABLE IF NOT EXISTS `puja` (
   PRIMARY KEY (`id`),
   KEY `id_item` (`id_item`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `puja`
+--
+
+INSERT INTO `puja` (`id`, `id_item`, `id_user`, `cantidad`, `fecha`) VALUES
+(1, 63, 6, 2, '2021-10-26'),
+(2, 60, 4, 61000000, '2021-10-26');
 
 -- --------------------------------------------------------
 
