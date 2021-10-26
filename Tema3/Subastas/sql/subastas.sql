@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-10-2021 a las 05:03:14
+-- Tiempo de generación: 26-10-2021 a las 01:52:27
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -32,7 +32,17 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `categoria` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `categoria`) VALUES
+(1, 'Cine'),
+(2, 'Joyería'),
+(3, 'Mierda'),
+(4, 'Videojuegos');
 
 -- --------------------------------------------------------
 
@@ -105,7 +115,20 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `activo` tinyint(4) NOT NULL,
   `falso` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `username`, `nombre`, `password`, `email`, `cadenaverificacion`, `activo`, `falso`) VALUES
+(1, 'Cesferort', 'César Ferreiro', 'Cesferort1234', 'cesferort@jajasaludos.com', '', 1, 1),
+(2, 'Elver Galarga', 'Nelson Ferreira', 'Elver_Galarga1234', 'elvergalarga@jajasaludos.com', '', 1, 1),
+(3, 'Stalin Dalavida', 'Aketza Egusquiza', 'Stalin_Dalavida1234', 'stalindalavida@jajasaludos.com', '', 1, 1),
+(4, 'Shark-minded Entrepreneur', 'Javier Díaz', 'Shark_Entrepreneur1234', 'sharkentrepreneur@jajasaludos.com', '', 1, 1),
+(5, 'Graphic Design is My Passion', 'Tania Alcudia', 'Graphic_Designer1234', 'graphicdesigner@jajasaludos.com', '', 1, 1),
+(6, 'Valquiria Chiquita', 'Patricia Bastida', 'Valquiria_Chiquita1234', 'valquiriachiquita@jajasaludos.com', '', 1, 1),
+(7, 'Valquiria Basada', 'Marta Bastida', 'Valquiria_Basada1234', 'valquiriabasada@jajasaludos.com', '', 1, 1);
 
 --
 -- Restricciones para tablas volcadas

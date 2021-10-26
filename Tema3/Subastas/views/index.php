@@ -1,5 +1,12 @@
 <?php
+require_once "cabecera.php";
 
+$visualizarTodas=true;
+if(isset($_GET["id"]))
+{
+    $idCatSeleccionada=$_GET["id"];
+    $visualizarTodas=false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
