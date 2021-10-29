@@ -1,5 +1,31 @@
 <?php
 /**
+ * Busca en la base de datos el item asociado al identificador pasado como parámetro.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $idItem            Identificador del item a buscar en la base de datos
+ * @return array $resultItem        Item asociado al identificador pasado como parámetro
+ */
+function getItemById($conn, $idItem)
+{
+    $resultItem="";
+    $queryItem="SELECT * FROM item WHERE id=?;";
+
+    $st=$conn -> prepare($queryItem);
+    $stPrepared=$st -> bind_param("i", $idItem);
+
+    $stExecuted=$st -> execute();
+    // En caso de que la query se haya realizado correctamente recuperamos los resultados
+    if($stPrepared && $stExecuted) 
+    {
+        $stResult=$st -> get_result();
+        if($item=$stResult -> fetch_assoc()) 
+            $resultItem = $item;
+    }
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    return $resultItem;
+}
+/**
  * Busca en la base de datos todos los item de la categoria especificada. Para esto 
  * recibe el identificador de la categoría a buscar.
  * @param mysqli $conn              Conexión a la base de datos
@@ -28,9 +54,9 @@ function getItemsOfCategory($conn, $idCategoria)
     // En caso de que la query se haya realizado correctamente recuperamos los resultados
     if($stPrepared && $stExecuted) 
     {
-        $stResult = $st -> get_result();
-        while($item = $stResult -> fetch_assoc()) 
-            $resultItems[] = $item;
+        $stResult=$st -> get_result();
+        while($item=$stResult -> fetch_assoc()) 
+            $resultItems[]=$item;
     }
     // Cerramos statement y devolvemos resultado
     $st -> close();

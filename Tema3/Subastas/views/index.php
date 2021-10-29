@@ -3,6 +3,7 @@ require_once "cabecera.php";
 require_once "../BD/gestorBD_item.php";
 require_once "../BD/gestorBD_imagen.php";
 require_once "../BD/gestorBD_puja.php";
+require_once "../lib/formato.php";
 
 $_SESSION["puntoPartida"]="./index.php";
 // Recuperamos categoria especificada por el usuari 
@@ -40,7 +41,7 @@ $items=getItemsOfCategory($conn, $idCategoria);
             // $items[$i]["id_user"];
             // $items[$i]["descripcion"];
             $nomItem=$items[$i]["nombre"];
-            $fechaLimite=$items[$i]["fechafin"];
+            $fechaFin=$items[$i]["fechafin"];
 
             $txt.="<tr>";
             if($src!="NA")
@@ -50,10 +51,8 @@ $items=getItemsOfCategory($conn, $idCategoria);
 
             $txt.="<td><a href='itemdetalles.php?idItem=".$idItem."'>$nomItem</a></td>";
             $txt.="<td>".$cantPujas."</td>";    
-            // TODO Formatear correctamente el precio. Mirar ejemplo ofrecido
-            $txt.="<td>".$precioActual."</td>"; 
-            // TODO Formatear correctamente la fecha. Mirar ejemplo ofrecido
-            $txt.="<td>".$fechaLimite."</td>";
+            $txt.="<td>".formatMoney($precioActual)."</td>"; 
+            $txt.="<td>".formatDate($fechaFin)."</td>";
             $txt.="</tr>";
         }
         echo $txt;

@@ -27,4 +27,32 @@ function getImageOfItem($conn, $idItem)
     $st -> close();
     return $resultImg;
 }
+
+/**
+ * Busca en la base de datos las imágenes asociadas al item deseado y devuelve su dirección.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $idItem            Identificador del item cuya imagen debemos buscar
+ * @return string $listaImgItem     Dirección de la imagen encontrada. "NA" en caso de no encontrar ninguna
+ */
+function getImagesOfItem($conn, $idItem)
+{
+    $listaImgItem=[];
+
+    $queryItem="SELECT * FROM imagen WHERE id_item=?;";
+    $st=$conn -> prepare($queryItem);
+    $stPrepared=$st -> bind_param("i", $idItem);
+    $stExecuted=$st -> execute();
+
+    // Comprobamos si se preparó y ejecutó correctamente
+    if($stPrepared && $stExecuted) 
+    {
+        $stResult = $st -> get_result();
+        while($item = $stResult -> fetch_assoc()) 
+            $listaImgItem[] = DIR_IMAGES.$item["imagen"];
+    }
+
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    return $listaImgItem;
+}
 ?>
