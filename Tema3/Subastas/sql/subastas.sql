@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-10-2021 a las 10:38:11
+-- Tiempo de generación: 28-10-2021 a las 04:29:56
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `categoria` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `categoria`
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `item` (
   PRIMARY KEY (`id`),
   KEY `id_cat` (`id_cat`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `item`
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `activo` tinyint(4) NOT NULL,
   `falso` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -164,7 +164,9 @@ INSERT INTO `usuario` (`id`, `username`, `nombre`, `password`, `email`, `cadenav
 (4, 'Shark-minded Entrepreneur', 'Javier Díaz', 'Shark_Entrepreneur1234', 'sharkentrepreneur@jajasaludos.com', '', 1, 1),
 (5, 'Graphic Design is My Passion', 'Tania Alcudia', 'Graphic_Designer1234', 'graphicdesigner@jajasaludos.com', '', 1, 1),
 (6, 'Valquiria Chiquita', 'Patricia Bastida', 'Valquiria_Chiquita1234', 'valquiriachiquita@jajasaludos.com', '', 1, 1),
-(7, 'Valquiria Basada', 'Marta Bastida', 'Valquiria_Basada1234', 'valquiriabasada@jajasaludos.com', '', 1, 1);
+(7, 'Valquiria Basada', 'Marta Bastida', 'Valquiria_Basada1234', 'valquiriabasada@jajasaludos.com', '', 1, 1),
+(12, 'Patata', 'César Ferreiro', '1234', 'cesferort99@gmail.com', 'OQvjZhiT7JWiqiva', 1, 0),
+(13, 'Cuenta Sin Activar', 'Cuenta Sin Activar', '1234', 'cuentasinactivar@example.com', 'IrbtXMosBqY24Wf2', 0, 0);
 
 --
 -- Restricciones para tablas volcadas

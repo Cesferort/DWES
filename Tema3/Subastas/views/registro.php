@@ -3,8 +3,8 @@ require_once "cabecera.php";
 require_once "../lib/gestorBD_usuarios.php";
 
 $checkPassword=true;
-$checkUserExists=true;
-
+$checkUserNotExists=true;
+$newUserInDB=false;
 if(isset($_POST["registerUser"]))
 {
     $passUser=$_POST["passUser"];
@@ -16,7 +16,7 @@ if(isset($_POST["registerUser"]))
         {
             $fullName=$_POST["fullName"];
             $emailUser=$_POST["emailUser"];
-            addUser($conn, $nomUser, $fullName, $passUser, $emailUser);
+            $newUserInDB=addUser($conn, $nomUser, $fullName, $passUser, $emailUser);
         }
         else 
             $checkUserExists=false;
@@ -25,18 +25,10 @@ if(isset($_POST["registerUser"]))
         $checkPassword=false;
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-</head>
 <body>
     <?php
-    if(!isset($_POST["registerUser"]) && $checkPassword==true && $checkUserExists==true)
-    {
+    if(!isset($_POST["registerUser"]) || ($checkPassword==false || $checkUserNotExists==false))
+    { 
     ?>
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <h2>REGISTRO</h2>
@@ -44,7 +36,7 @@ if(isset($_POST["registerUser"]))
         <?php
         if($checkPassword==false)
             echo "<p style='color:red'>Las contraseñas introducidas no coinciden</p>";
-        if($checkUserExists==false)
+        if($checkUserNotExists==false)
             echo "<p style='color:red'>El usuario ".$nomUser." ya existe</p>";
         ?>
         <table>
@@ -76,6 +68,10 @@ if(isset($_POST["registerUser"]))
     </form>
     <?php
     }
+    else if($newUserInDB==true)
+        echo "<p>Registro completado. Comprueba tu correo para activar la cuenta.</p>";
+    else 
+        echo "<p style='color:red'>No se ha podido completar el registro satisfactoriamente.</p>";
     ?>
 </body>
 </html>

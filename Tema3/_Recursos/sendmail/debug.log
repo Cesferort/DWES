@@ -1,0 +1,138 @@
+21/10/28 04:38:50 ** --- MESSAGE BEGIN ---
+21/10/28 04:38:50 ** To: cesferort99@gmail.com
+21/10/28 04:38:50 ** Subject: Registro en Subastas.com
+21/10/28 04:38:50 ** From: phpalas4am@gmail.com
+21/10/28 04:38:50 ** MIME-Version: 1.0
+21/10/28 04:38:50 ** Content-type: text/html; charset=utf-8
+21/10/28 04:38:50 ** 
+21/10/28 04:38:50 **     Hola Patata. Haz clic en el siguiente enlace para registrarte:
+21/10/28 04:38:50 **     http://127.0.0.1/DWES/Tema3/Subastas/views/verificacion.php?emailUser=cesferort99%40gmail.com&codVerificacion=OQvjZhiT7JWiqiva
+21/10/28 04:38:50 **     Gracias
+21/10/28 04:38:50 ** --- MESSAGE END ---
+21/10/28 04:38:50 ** Connecting to smtp.gmail.com:465
+21/10/28 04:38:51 ** Connected.
+21/10/28 04:38:51 << 220 smtp.gmail.com ESMTP j9sm1470060wrt.96 - gsmtp<EOL>
+21/10/28 04:38:51 >> EHLO localhost<EOL>
+21/10/28 04:38:51 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/10/28 04:38:51 ** Authenticating as phpalas4am@gmail.com
+21/10/28 04:38:51 >> AUTH LOGIN<EOL>
+21/10/28 04:38:51 << 334 VXNlcm5hbWU6<EOL>
+21/10/28 04:38:51 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/10/28 04:38:51 << 334 UGFzc3dvcmQ6<EOL>
+21/10/28 04:38:51 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/10/28 04:38:51 << 235 2.7.0 Accepted<EOL>
+21/10/28 04:38:51 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/10/28 04:38:51 << 250 2.1.0 OK j9sm1470060wrt.96 - gsmtp<EOL>
+21/10/28 04:38:51 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/10/28 04:38:51 << 250 2.1.5 OK j9sm1470060wrt.96 - gsmtp<EOL>
+21/10/28 04:38:51 >> DATA<EOL>
+21/10/28 04:38:51 << 354  Go ahead j9sm1470060wrt.96 - gsmtp<EOL>
+21/10/28 04:38:51 >> Date: Thu, 28 Oct 2021 04:38:51 +0200<EOL>
+21/10/28 04:38:51 >> To: cesferort99@gmail.com<EOL>
+21/10/28 04:38:51 >> Subject: Registro en Subastas.com<EOL>
+21/10/28 04:38:51 >> From: phpalas4am@gmail.com<EOL>
+21/10/28 04:38:51 >> MIME-Version: 1.0<EOL>
+21/10/28 04:38:51 >> Content-type: text/html; charset=utf-8<EOL>
+21/10/28 04:38:51 >> <EOL>
+21/10/28 04:38:51 >>     Hola Patata. Haz clic en el siguiente enlace para registrarte:<EOL>
+21/10/28 04:38:51 >>     http://127.0.0.1/DWES/Tema3/Subastas/views/verificacion.php?emailUser=cesferort99%40gmail.com&codVerificacion=OQvjZhiT7JWiqiva<EOL>
+21/10/28 04:38:51 >>     Gracias<EOL>
+21/10/28 04:38:51 >> .<EOL>
+21/10/28 04:38:52 << 250 2.0.0 OK  1635388733 j9sm1470060wrt.96 - gsmtp<EOL>
+21/10/28 04:38:52 >> QUIT<EOL>
+21/10/28 04:38:52 << 221 2.0.0 closing connection j9sm1470060wrt.96 - gsmtp<EOL>
+21/10/28 04:38:52 ** Disconnecting from smtp.gmail.com:465
+21/10/28 04:38:52 ** Disconnected.
+21/10/28 04:38:52 ** Disconnected.
+21/10/28 06:05:25 ** --- MESSAGE BEGIN ---
+21/10/28 06:05:25 ** To: cuentasinactivar@example.com
+21/10/28 06:05:25 ** Subject: Registro en Subastas.com
+21/10/28 06:05:25 ** From: phpalas4am@gmail.com
+21/10/28 06:05:25 ** MIME-Version: 1.0
+21/10/28 06:05:25 ** Content-type: text/html; charset=utf-8
+21/10/28 06:05:25 ** 
+21/10/28 06:05:25 **     Hola Cuenta Sin Activar. Haz clic en el siguiente enlace para registrarte:
+21/10/28 06:05:25 **     http://127.0.0.1/DWES/Tema3/Subastas/views/verificacion.php?emailUser=cuentasinactivar%40example.com&codVerificacion=IrbtXMosBqY24Wf2
+21/10/28 06:05:25 **     Gracias
+21/10/28 06:05:25 ** --- MESSAGE END ---
+21/10/28 06:05:25 ** Connecting to smtp.gmail.com:465
+21/10/28 06:05:25 ** Connected.
+21/10/28 06:05:25 << 220 smtp.gmail.com ESMTP k34sm435715wms.21 - gsmtp<EOL>
+21/10/28 06:05:25 >> EHLO localhost<EOL>
+21/10/28 06:05:26 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/10/28 06:05:26 ** Authenticating as phpalas4am@gmail.com
+21/10/28 06:05:26 >> AUTH LOGIN<EOL>
+21/10/28 06:05:26 << 334 VXNlcm5hbWU6<EOL>
+21/10/28 06:05:26 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/10/28 06:05:26 << 334 UGFzc3dvcmQ6<EOL>
+21/10/28 06:05:26 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/10/28 06:05:26 << 235 2.7.0 Accepted<EOL>
+21/10/28 06:05:26 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/10/28 06:05:26 << 250 2.1.0 OK k34sm435715wms.21 - gsmtp<EOL>
+21/10/28 06:05:26 >> RCPT TO: <cuentasinactivar@example.com><EOL>
+21/10/28 06:05:26 << 250 2.1.5 OK k34sm435715wms.21 - gsmtp<EOL>
+21/10/28 06:05:26 >> DATA<EOL>
+21/10/28 06:05:26 << 354  Go ahead k34sm435715wms.21 - gsmtp<EOL>
+21/10/28 06:05:26 >> Date: Thu, 28 Oct 2021 06:05:26 +0200<EOL>
+21/10/28 06:05:26 >> To: cuentasinactivar@example.com<EOL>
+21/10/28 06:05:26 >> Subject: Registro en Subastas.com<EOL>
+21/10/28 06:05:26 >> From: phpalas4am@gmail.com<EOL>
+21/10/28 06:05:26 >> MIME-Version: 1.0<EOL>
+21/10/28 06:05:26 >> Content-type: text/html; charset=utf-8<EOL>
+21/10/28 06:05:26 >> <EOL>
+21/10/28 06:05:26 >>     Hola Cuenta Sin Activar. Haz clic en el siguiente enlace para registrarte:<EOL>
+21/10/28 06:05:26 >>     http://127.0.0.1/DWES/Tema3/Subastas/views/verificacion.php?emailUser=cuentasinactivar%40example.com&codVerificacion=IrbtXMosBqY24Wf2<EOL>
+21/10/28 06:05:26 >>     Gracias<EOL>
+21/10/28 06:05:26 >> .<EOL>
+21/10/28 06:05:27 << 250 2.0.0 OK  1635393928 k34sm435715wms.21 - gsmtp<EOL>
+21/10/28 06:05:27 >> QUIT<EOL>
+21/10/28 06:05:27 << 221 2.0.0 closing connection k34sm435715wms.21 - gsmtp<EOL>
+21/10/28 06:05:27 ** Disconnecting from smtp.gmail.com:465
+21/10/28 06:05:27 ** Disconnected.
+21/10/28 06:05:27 ** Disconnected.
+21/10/29 08:51:03 ** --- MESSAGE BEGIN ---
+21/10/29 08:51:03 ** To: cesferort99@gmail.com
+21/10/29 08:51:03 ** Subject: Registro en Subastas.com
+21/10/29 08:51:03 ** From: phpalas4am@gmail.com
+21/10/29 08:51:03 ** MIME-Version: 1.0
+21/10/29 08:51:03 ** Content-type: text/html; charset=utf-8
+21/10/29 08:51:03 ** 
+21/10/29 08:51:03 **     Hola Prueba. Haz clic en el siguiente enlace para registrarte:
+21/10/29 08:51:03 **     http://127.0.0.1/DWES/Tema3/Subastas/views/verificacion.php?emailUser=cesferort99%40gmail.com&codVerificacion=ycBXuif0mReM75k6
+21/10/29 08:51:03 **     Gracias
+21/10/29 08:51:03 ** --- MESSAGE END ---
+21/10/29 08:51:03 ** Connecting to smtp.gmail.com:465
+21/10/29 08:51:03 ** Connected.
+21/10/29 08:51:03 << 220 smtp.gmail.com ESMTP g5sm1957202wmi.2 - gsmtp<EOL>
+21/10/29 08:51:03 >> EHLO localhost<EOL>
+21/10/29 08:51:03 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/10/29 08:51:03 ** Authenticating as phpalas4am@gmail.com
+21/10/29 08:51:03 >> AUTH LOGIN<EOL>
+21/10/29 08:51:03 << 334 VXNlcm5hbWU6<EOL>
+21/10/29 08:51:03 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/10/29 08:51:03 << 334 UGFzc3dvcmQ6<EOL>
+21/10/29 08:51:03 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/10/29 08:51:04 << 235 2.7.0 Accepted<EOL>
+21/10/29 08:51:04 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/10/29 08:51:04 << 250 2.1.0 OK g5sm1957202wmi.2 - gsmtp<EOL>
+21/10/29 08:51:04 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/10/29 08:51:04 << 250 2.1.5 OK g5sm1957202wmi.2 - gsmtp<EOL>
+21/10/29 08:51:04 >> DATA<EOL>
+21/10/29 08:51:04 << 354  Go ahead g5sm1957202wmi.2 - gsmtp<EOL>
+21/10/29 08:51:04 >> Date: Fri, 29 Oct 2021 08:51:04 +0200<EOL>
+21/10/29 08:51:04 >> To: cesferort99@gmail.com<EOL>
+21/10/29 08:51:04 >> Subject: Registro en Subastas.com<EOL>
+21/10/29 08:51:04 >> From: phpalas4am@gmail.com<EOL>
+21/10/29 08:51:04 >> MIME-Version: 1.0<EOL>
+21/10/29 08:51:04 >> Content-type: text/html; charset=utf-8<EOL>
+21/10/29 08:51:04 >> <EOL>
+21/10/29 08:51:04 >>     Hola Prueba. Haz clic en el siguiente enlace para registrarte:<EOL>
+21/10/29 08:51:04 >>     http://127.0.0.1/DWES/Tema3/Subastas/views/verificacion.php?emailUser=cesferort99%40gmail.com&codVerificacion=ycBXuif0mReM75k6<EOL>
+21/10/29 08:51:04 >>     Gracias<EOL>
+21/10/29 08:51:04 >> .<EOL>
+21/10/29 08:51:05 << 250 2.0.0 OK  1635490266 g5sm1957202wmi.2 - gsmtp<EOL>
+21/10/29 08:51:05 >> QUIT<EOL>
+21/10/29 08:51:05 << 221 2.0.0 closing connection g5sm1957202wmi.2 - gsmtp<EOL>
+21/10/29 08:51:05 ** Disconnecting from smtp.gmail.com:465
+21/10/29 08:51:05 ** Disconnected.
+21/10/29 08:51:05 ** Disconnected.
