@@ -1,6 +1,6 @@
 <?php 
 require_once "cabecera.php";
-require_once "../lib/gestorBD_usuarios.php";
+require_once "../BD/gestorBD_usuario.php";
 
 $userVerified=false;
 if(isset($_GET["emailUser"]) && isset($_GET["codVerificacion"]))

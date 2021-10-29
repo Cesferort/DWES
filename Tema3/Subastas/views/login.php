@@ -1,6 +1,6 @@
 <?php
 require_once "cabecera.php";
-require_once "../lib/gestorBD_usuarios.php";
+require_once "../BD/gestorBD_usuario.php";
 
 $datosValidos=1;
 if(isset($_POST["login"]))
