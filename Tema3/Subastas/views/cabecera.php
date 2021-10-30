@@ -1,6 +1,8 @@
 <?php 
 require_once "../lib/config.php";
+
 session_start();
+
 $conn=conectarBD();
 function conectarBD()
 {
@@ -22,12 +24,12 @@ function conectarBD()
     <div id="menu">
         <a href="index.php">Home</a>
         <?php
-        if(isset($_SESSION['USERNAME'])) 
+        if(isset($_SESSION['nomUser']) && isset($_SESSION['idUser'])) 
             echo "<a href='logout.php'>Logout</a>";
         else
             echo "<a href='login.php'>Login</a>";
         ?>
-        <a href="newitem.php">Nuevo item</a>
+        <a href="./nuevoitem.php">Nuevo item</a>
     </div>
     <div id="container">
         <div id="bar">

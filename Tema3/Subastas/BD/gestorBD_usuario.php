@@ -138,4 +138,28 @@ function verifyUser($conn, $codVerificacion, $emailUser)
     }
     return false;
 }
+
+function getUserFromId($conn, $idUser)
+{
+    $queryUser="SELECT * FROM usuario WHERE id=?;";
+    
+    $st=$conn -> prepare($queryUser);
+    $stPrepared=$st -> bind_param("i", $idUser);
+    $stExecuted = $st -> execute(); 
+
+    // En caso de que la query se haya realizado correctamente recuperamos los resultados
+    if($stPrepared && $stExecuted) 
+    {
+        $stResult = $st -> get_result();
+        if($usuario = $stResult -> fetch_assoc()) 
+        {
+            // Cerramos statement y devolvemos resultado
+            $st -> close();
+            return $usuario;
+        }
+    }
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    return null;
+}
 ?>
