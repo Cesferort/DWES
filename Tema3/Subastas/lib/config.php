@@ -1,4 +1,7 @@
 <?php 
+// Timezone Andorra
+date_default_timezone_set('Europe/Andorra');
+
 // Host, usuario y contraseña para acceso al servidor MySQL
 define("DB_HOST" , "localhost");
 define("DB_USER" , "root");
@@ -8,14 +11,14 @@ define("DB_PASSWORD" , "");
 define("DB" , "subastas");
 
 // Nombre del foro de subastas
-define("FORUM_TITLE","Subastas.com");
+define("FORUM_TITLE", "Subastas.com");
 
 // Ruta base de la aplicación
 define("BASE_ROUTE", "http://" . $_SERVER['SERVER_NAME']."/DWES/Tema3/Subastas/");
 
 // Moneda local
-define("CURRENCY","€");
+define("CURRENCY", "€");
 
 // Ruta de carpeta de imágenes
-define("DIR_IMAGES",BASE_ROUTE."images/");
+define("DIR_IMAGES", BASE_ROUTE."images/");
 ?>

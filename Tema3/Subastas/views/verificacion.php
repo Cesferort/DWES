@@ -20,3 +20,4 @@ if(isset($_GET["emailUser"]) && isset($_GET["codVerificacion"]))
     ?>
 </body>
 </html>
+<?php require_once "./footer.php" ?>

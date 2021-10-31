@@ -52,3 +52,4 @@ if(isset($_POST["login"]))
     ?>
 </body>
 </html>
+<?php require_once "./footer.php" ?>

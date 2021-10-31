@@ -61,7 +61,11 @@ if(isset($_GET["idItem"]))
     for($i=0; $i < count($listaImgItem); $i++)
     {
         $src=$listaImgItem[$i];
-        $html.="<img src='$src' alt='${nomItem}_$i' width='150px' height='150px'>";       
+        echo $src."<br>";
+        if($i < 10)
+            $html.="<img src='../images/$src' alt='${nomItem}_0$i' width='150px' height='150px'>";       
+        else
+            $html.="<img src='../images/$src' alt='${nomItem}_$i' width='150px' height='150px'>";       
     }
     $html.="<h2>$descItem</h2>";
     $html.="<h1>Puja por este item</h1>";
@@ -117,3 +121,4 @@ if(isset($_GET["idItem"]))
 ?>
 </body>
 </html>
+<?php require_once "./footer.php" ?>

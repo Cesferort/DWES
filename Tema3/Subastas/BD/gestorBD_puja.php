@@ -31,17 +31,22 @@ function getPujaDataOfItem($conn, $idItem)
     
     // Calculamos el precio de la puja más alta
     $maxPuja=-1;
+    $idGanador=false;
     for($i=0;$i<count($pujas);$i++)
     {
         $cantidad=$pujas[$i]["cantidad"];
         if($cantidad>$maxPuja)
+        {
             $maxPuja=$cantidad;
+            $idGanador=$pujas[$i]["id_user"];
+        }
     }
 
     // Formateamos correctamente y devolvemos resultado
     $result=[];
     $result[]=count($pujas);
     $result[]=$maxPuja;
+    $result[]=$idGanador;
     return $result;
 }
 

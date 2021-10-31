@@ -6,7 +6,7 @@ require_once "../BD/gestorBD_puja.php";
 require_once "../lib/formato.php";
 
 $_SESSION["puntoPartida"]="./index.php";
-// Recuperamos categoria especificada por el usuari 
+// Recuperamos categoria especificada por el usuario
 $idCategoria="";
 if(isset($_GET["id"]))
     $idCategoria=$_GET["id"];
@@ -38,8 +38,7 @@ $items=getItemsOfCategory($conn, $idCategoria);
                 $precioPartida=$items[$i]["preciopartida"];
                 $precioActual=$precioPartida;
             }
-            // $items[$i]["id_user"];
-            // $items[$i]["descripcion"];
+            $id_user=$items[$i]["id_user"];
             $nomItem=$items[$i]["nombre"];
             $fechaFin=$items[$i]["fechafin"];
 
@@ -49,7 +48,10 @@ $items=getItemsOfCategory($conn, $idCategoria);
             else 
                 $txt.="<td>NO IMAGEN</td>";
 
-            $txt.="<td><a href='itemdetalles.php?idItem=".$idItem."'>$nomItem</a></td>";
+            if(isset($_SESSION["idUser"]) && $id_user == $_SESSION["idUser"])
+                $txt.="<td><a href='itemdetalles.php?idItem=".$idItem."'>$nomItem</a> - <a href='./editaritem.php?idItem=$idItem'>[editar]</a></td>";
+            else 
+                $txt.="<td><a href='itemdetalles.php?idItem=".$idItem."'>$nomItem</a></td>";;
             $txt.="<td>".$cantPujas."</td>";    
             $txt.="<td>".formatMoney($precioActual)."</td>"; 
             $txt.="<td>".formatDate($fechaFin)."</td>";
@@ -60,3 +62,4 @@ $items=getItemsOfCategory($conn, $idCategoria);
     </table>
 </body>
 </html>
+<?php require_once "./footer.php" ?>

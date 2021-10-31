@@ -1,4 +1,37 @@
 <?php
+function addImagen($conn, $idItem, $imagen)
+{
+    $queryImagen="INSERT INTO imagen(id_item, imagen) VALUES(?,?);";
+    
+    $st=$conn -> prepare($queryImagen);
+    $stPrepared=$st -> bind_param("is", $idItem, $imagen);
+    $stExecuted=$st -> execute();
+    
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    if($stPrepared && $stExecuted)
+        return true;
+    else 
+        return false;
+}
+function deleteImagen($conn, $idItem, $deletePathImg)
+{
+    $f="../images/".$deletePathImg;
+    unlink($f);
+
+    $queryImagen="DELETE FROM imagen WHERE id_item=? AND imagen=?;";
+    
+    $st=$conn -> prepare($queryImagen);
+    $stPrepared=$st -> bind_param("is", $idItem, $deletePathImg);
+    $stExecuted=$st -> execute();
+    
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    if($stPrepared && $stExecuted)
+        return true;
+    else 
+        return false;
+}
 /**
  * Busca en la base de datos la imagen asociada al item deseado y devuelve su dirección. La base puede 
  * guardar múltiples imágenes asociadas al un item, en caso de ser así se devolvera el primer encuentro.
@@ -48,7 +81,7 @@ function getImagesOfItem($conn, $idItem)
     {
         $stResult = $st -> get_result();
         while($item = $stResult -> fetch_assoc()) 
-            $listaImgItem[] = DIR_IMAGES.$item["imagen"];
+            $listaImgItem[] = $item["imagen"];
     }
 
     // Cerramos statement y devolvemos resultado

@@ -75,3 +75,4 @@ if(isset($_POST["registerUser"]))
     ?>
 </body>
 </html>
+<?php require_once "./footer.php" ?>

@@ -25,11 +25,18 @@ function conectarBD()
         <a href="index.php">Home</a>
         <?php
         if(isset($_SESSION['nomUser']) && isset($_SESSION['idUser'])) 
-            echo "<a href='logout.php'>Logout</a>";
+        {
+            echo "<a href='logout.php'>Logout </a>";
+            echo "<a href='./nuevoitem.php'>Nuevo item</a>";
+            if("admin" == $_SESSION["nomUser"])
+            {
+                echo "<a href='./vencidas.php'> Subastas vencidas</a>";
+                echo "<a href='./publi.php'> Anunciantes</a>";
+            }
+        }
         else
             echo "<a href='login.php'>Login</a>";
         ?>
-        <a href="./nuevoitem.php">Nuevo item</a>
     </div>
     <div id="container">
         <div id="bar">
