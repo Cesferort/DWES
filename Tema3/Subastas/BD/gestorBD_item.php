@@ -160,6 +160,50 @@ function getExpiredItems($conn)
 }
 
 /**
+ * Busca en la base de datos todos los item cuya fecha fin para pujas este cerca de expirar
+ * (vigencia menor a 3 días). O bien no tienen pujas, o bien la puja más alta no supera el 
+ * 10% del valor de partida.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @return array $resultItems       Array de items expirados
+ */
+function getAlmostExpiredItems($conn)
+{
+    $resultItem=[];//todo
+    // Se seledccionan los items cuya fecha fin de las pujas este cerca de expirar
+    // (vigencia menor a 3 días). O bien no tienen pujas, o bien la puja más alta no supera el 
+    // 10% del valor de partida.
+    $queryItem="
+    SELECT * 
+    FROM item 
+    WHERE TIMESTAMPDIFF(DAY, fechafin, now()) < 3
+    AND NOT EXISTS
+    (
+        SELECT *
+        FROM puja
+        WHERE puja.id_item = item.id
+    )
+    OR preciopartida * 1.1 <
+    (
+        SELECT max(puja.cantidad)
+        FROM puja
+        WHERE puja.id_item = item.id
+    );";
+
+    $st=$conn -> prepare($queryItem);
+    $stExecuted=$st -> execute();
+    // En caso de que la query se haya realizado correctamente recuperamos los resultados
+    if($stExecuted) 
+    {
+        $stResult=$st -> get_result();
+        while($item=$stResult -> fetch_assoc()) 
+            $resultItem[]=$item;
+    }
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    return $resultItem;
+}
+
+/**
  * Cambia el precio de un item existente en la base de datos. Para esto recibe el identificador
  * del item cuyo precio deseamos cambiar y el nuevo precio a establecer.
  * @param mysqli $conn              Conexión a la base de datos

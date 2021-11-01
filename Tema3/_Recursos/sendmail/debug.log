@@ -182,3 +182,647 @@
 21/10/29 10:43:21 ** Disconnecting from smtp.gmail.com:465
 21/10/29 10:43:21 ** Disconnected.
 21/10/29 10:43:21 ** Disconnected.
+21/11/01 17:27:29 ** --- MESSAGE BEGIN ---
+21/11/01 17:27:29 ** To: cesferort99@gmail.com
+21/11/01 17:27:29 ** Subject: Publicidad de Subastas.com
+21/11/01 17:27:29 ** From: phpalas4am@gmail.com
+21/11/01 17:27:29 ** MIME-Version: 1.0
+21/11/01 17:27:29 ** Content-type: text/html; charset=utf-8
+21/11/01 17:27:29 ** 
+21/11/01 17:27:29 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:27:29 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57
+21/11/01 17:27:29 **     Gracias
+21/11/01 17:27:29 ** --- MESSAGE END ---
+21/11/01 17:27:29 ** Connecting to smtp.gmail.com:465
+21/11/01 17:27:30 ** Connected.
+21/11/01 17:27:30 << 220 smtp.gmail.com ESMTP d6sm9811259wrx.60 - gsmtp<EOL>
+21/11/01 17:27:30 >> EHLO localhost<EOL>
+21/11/01 17:27:30 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:27:30 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:27:30 >> AUTH LOGIN<EOL>
+21/11/01 17:27:30 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:27:30 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:27:30 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:27:30 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:27:30 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:27:30 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:27:30 << 250 2.1.0 OK d6sm9811259wrx.60 - gsmtp<EOL>
+21/11/01 17:27:30 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:27:30 << 250 2.1.5 OK d6sm9811259wrx.60 - gsmtp<EOL>
+21/11/01 17:27:30 >> DATA<EOL>
+21/11/01 17:27:31 << 354  Go ahead d6sm9811259wrx.60 - gsmtp<EOL>
+21/11/01 17:27:31 >> Date: Mon, 1 Nov 2021 17:27:31 +0100<EOL>
+21/11/01 17:27:31 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:27:31 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:27:31 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:27:31 >> MIME-Version: 1.0<EOL>
+21/11/01 17:27:31 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:27:31 >> <EOL>
+21/11/01 17:27:31 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:27:31 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57<EOL>
+21/11/01 17:27:31 >>     Gracias<EOL>
+21/11/01 17:27:31 >> .<EOL>
+21/11/01 17:27:32 << 250 2.0.0 OK  1635784052 d6sm9811259wrx.60 - gsmtp<EOL>
+21/11/01 17:27:32 >> QUIT<EOL>
+21/11/01 17:27:32 << 221 2.0.0 closing connection d6sm9811259wrx.60 - gsmtp<EOL>
+21/11/01 17:27:32 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:27:32 ** Disconnected.
+21/11/01 17:27:32 ** Disconnected.
+21/11/01 17:27:32 ** --- MESSAGE BEGIN ---
+21/11/01 17:27:32 ** To: cesferort99@gmail.com
+21/11/01 17:27:32 ** Subject: Publicidad de Subastas.com
+21/11/01 17:27:32 ** From: phpalas4am@gmail.com
+21/11/01 17:27:32 ** MIME-Version: 1.0
+21/11/01 17:27:32 ** Content-type: text/html; charset=utf-8
+21/11/01 17:27:32 ** 
+21/11/01 17:27:32 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:27:32 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65
+21/11/01 17:27:32 **     Gracias
+21/11/01 17:27:32 ** --- MESSAGE END ---
+21/11/01 17:27:32 ** Connecting to smtp.gmail.com:465
+21/11/01 17:27:32 ** Connected.
+21/11/01 17:27:32 << 220 smtp.gmail.com ESMTP m35sm479064wms.2 - gsmtp<EOL>
+21/11/01 17:27:32 >> EHLO localhost<EOL>
+21/11/01 17:27:32 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:27:32 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:27:32 >> AUTH LOGIN<EOL>
+21/11/01 17:27:32 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:27:32 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:27:32 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:27:32 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:27:32 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:27:32 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:27:32 << 250 2.1.0 OK m35sm479064wms.2 - gsmtp<EOL>
+21/11/01 17:27:32 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:27:33 << 250 2.1.5 OK m35sm479064wms.2 - gsmtp<EOL>
+21/11/01 17:27:33 >> DATA<EOL>
+21/11/01 17:27:33 << 354  Go ahead m35sm479064wms.2 - gsmtp<EOL>
+21/11/01 17:27:33 >> Date: Mon, 1 Nov 2021 17:27:33 +0100<EOL>
+21/11/01 17:27:33 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:27:33 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:27:33 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:27:33 >> MIME-Version: 1.0<EOL>
+21/11/01 17:27:33 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:27:33 >> <EOL>
+21/11/01 17:27:33 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:27:33 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65<EOL>
+21/11/01 17:27:33 >>     Gracias<EOL>
+21/11/01 17:27:33 >> .<EOL>
+21/11/01 17:27:33 << 250 2.0.0 OK  1635784053 m35sm479064wms.2 - gsmtp<EOL>
+21/11/01 17:27:33 >> QUIT<EOL>
+21/11/01 17:27:33 << 221 2.0.0 closing connection m35sm479064wms.2 - gsmtp<EOL>
+21/11/01 17:27:33 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:27:33 ** Disconnected.
+21/11/01 17:27:33 ** Disconnected.
+21/11/01 17:29:08 ** --- MESSAGE BEGIN ---
+21/11/01 17:29:08 ** To: cesferort99@gmail.com
+21/11/01 17:29:08 ** Subject: Publicidad de Subastas.com
+21/11/01 17:29:08 ** From: phpalas4am@gmail.com
+21/11/01 17:29:08 ** MIME-Version: 1.0
+21/11/01 17:29:08 ** Content-type: text/html; charset=utf-8
+21/11/01 17:29:08 ** 
+21/11/01 17:29:08 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:29:08 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57
+21/11/01 17:29:08 **     Gracias
+21/11/01 17:29:08 ** --- MESSAGE END ---
+21/11/01 17:29:08 ** Connecting to smtp.gmail.com:465
+21/11/01 17:29:08 ** Connected.
+21/11/01 17:29:08 << 220 smtp.gmail.com ESMTP a1sm5987472wri.89 - gsmtp<EOL>
+21/11/01 17:29:08 >> EHLO localhost<EOL>
+21/11/01 17:29:09 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:29:09 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:29:09 >> AUTH LOGIN<EOL>
+21/11/01 17:29:09 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:29:09 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:29:09 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:29:09 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:29:09 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:29:09 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:29:09 << 250 2.1.0 OK a1sm5987472wri.89 - gsmtp<EOL>
+21/11/01 17:29:09 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:29:09 << 250 2.1.5 OK a1sm5987472wri.89 - gsmtp<EOL>
+21/11/01 17:29:09 >> DATA<EOL>
+21/11/01 17:29:09 << 354  Go ahead a1sm5987472wri.89 - gsmtp<EOL>
+21/11/01 17:29:09 >> Date: Mon, 1 Nov 2021 17:29:09 +0100<EOL>
+21/11/01 17:29:09 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:29:09 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:29:09 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:29:09 >> MIME-Version: 1.0<EOL>
+21/11/01 17:29:09 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:29:09 >> <EOL>
+21/11/01 17:29:09 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:29:09 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57<EOL>
+21/11/01 17:29:09 >>     Gracias<EOL>
+21/11/01 17:29:09 >> .<EOL>
+21/11/01 17:29:09 << 250 2.0.0 OK  1635784150 a1sm5987472wri.89 - gsmtp<EOL>
+21/11/01 17:29:09 >> QUIT<EOL>
+21/11/01 17:29:09 << 221 2.0.0 closing connection a1sm5987472wri.89 - gsmtp<EOL>
+21/11/01 17:29:09 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:29:09 ** Disconnected.
+21/11/01 17:29:09 ** Disconnected.
+21/11/01 17:29:09 ** --- MESSAGE BEGIN ---
+21/11/01 17:29:09 ** To: cesferort99@gmail.com
+21/11/01 17:29:09 ** Subject: Publicidad de Subastas.com
+21/11/01 17:29:09 ** From: phpalas4am@gmail.com
+21/11/01 17:29:10 ** MIME-Version: 1.0
+21/11/01 17:29:10 ** Content-type: text/html; charset=utf-8
+21/11/01 17:29:10 ** 
+21/11/01 17:29:10 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:29:10 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65
+21/11/01 17:29:10 **     Gracias
+21/11/01 17:29:10 ** --- MESSAGE END ---
+21/11/01 17:29:10 ** Connecting to smtp.gmail.com:465
+21/11/01 17:29:10 ** Connected.
+21/11/01 17:29:10 << 220 smtp.gmail.com ESMTP m2sm4974wml.15 - gsmtp<EOL>
+21/11/01 17:29:10 >> EHLO localhost<EOL>
+21/11/01 17:29:10 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:29:10 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:29:10 >> AUTH LOGIN<EOL>
+21/11/01 17:29:10 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:29:10 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:29:10 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:29:10 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:29:10 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:29:10 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:29:10 << 250 2.1.0 OK m2sm4974wml.15 - gsmtp<EOL>
+21/11/01 17:29:10 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:29:10 << 250 2.1.5 OK m2sm4974wml.15 - gsmtp<EOL>
+21/11/01 17:29:10 >> DATA<EOL>
+21/11/01 17:29:10 << 354  Go ahead m2sm4974wml.15 - gsmtp<EOL>
+21/11/01 17:29:10 >> Date: Mon, 1 Nov 2021 17:29:10 +0100<EOL>
+21/11/01 17:29:10 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:29:10 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:29:10 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:29:10 >> MIME-Version: 1.0<EOL>
+21/11/01 17:29:10 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:29:10 >> <EOL>
+21/11/01 17:29:10 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:29:10 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65<EOL>
+21/11/01 17:29:10 >>     Gracias<EOL>
+21/11/01 17:29:10 >> .<EOL>
+21/11/01 17:29:11 << 250 2.0.0 OK  1635784151 m2sm4974wml.15 - gsmtp<EOL>
+21/11/01 17:29:11 >> QUIT<EOL>
+21/11/01 17:29:11 << 221 2.0.0 closing connection m2sm4974wml.15 - gsmtp<EOL>
+21/11/01 17:29:11 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:29:11 ** Disconnected.
+21/11/01 17:29:11 ** Disconnected.
+21/11/01 17:29:39 ** --- MESSAGE BEGIN ---
+21/11/01 17:29:39 ** To: cesferort99@gmail.com
+21/11/01 17:29:39 ** Subject: Publicidad de Subastas.com
+21/11/01 17:29:39 ** From: phpalas4am@gmail.com
+21/11/01 17:29:39 ** MIME-Version: 1.0
+21/11/01 17:29:39 ** Content-type: text/html; charset=utf-8
+21/11/01 17:29:39 ** 
+21/11/01 17:29:39 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:29:39 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57
+21/11/01 17:29:39 **     Gracias
+21/11/01 17:29:39 ** --- MESSAGE END ---
+21/11/01 17:29:40 ** Connecting to smtp.gmail.com:465
+21/11/01 17:29:40 ** Connected.
+21/11/01 17:29:40 << 220 smtp.gmail.com ESMTP z11sm4569932wrt.58 - gsmtp<EOL>
+21/11/01 17:29:40 >> EHLO localhost<EOL>
+21/11/01 17:29:40 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:29:40 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:29:40 >> AUTH LOGIN<EOL>
+21/11/01 17:29:40 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:29:40 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:29:40 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:29:40 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:29:40 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:29:40 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:29:40 << 250 2.1.0 OK z11sm4569932wrt.58 - gsmtp<EOL>
+21/11/01 17:29:40 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:29:40 << 250 2.1.5 OK z11sm4569932wrt.58 - gsmtp<EOL>
+21/11/01 17:29:40 >> DATA<EOL>
+21/11/01 17:29:40 << 354  Go ahead z11sm4569932wrt.58 - gsmtp<EOL>
+21/11/01 17:29:40 >> Date: Mon, 1 Nov 2021 17:29:40 +0100<EOL>
+21/11/01 17:29:40 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:29:40 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:29:40 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:29:40 >> MIME-Version: 1.0<EOL>
+21/11/01 17:29:40 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:29:40 >> <EOL>
+21/11/01 17:29:40 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:29:40 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57<EOL>
+21/11/01 17:29:40 >>     Gracias<EOL>
+21/11/01 17:29:40 >> .<EOL>
+21/11/01 17:29:41 << 250 2.0.0 OK  1635784181 z11sm4569932wrt.58 - gsmtp<EOL>
+21/11/01 17:29:41 >> QUIT<EOL>
+21/11/01 17:29:41 << 221 2.0.0 closing connection z11sm4569932wrt.58 - gsmtp<EOL>
+21/11/01 17:29:41 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:29:41 ** Disconnected.
+21/11/01 17:29:41 ** Disconnected.
+21/11/01 17:29:41 ** --- MESSAGE BEGIN ---
+21/11/01 17:29:41 ** To: cesferort99@gmail.com
+21/11/01 17:29:41 ** Subject: Publicidad de Subastas.com
+21/11/01 17:29:41 ** From: phpalas4am@gmail.com
+21/11/01 17:29:41 ** MIME-Version: 1.0
+21/11/01 17:29:41 ** Content-type: text/html; charset=utf-8
+21/11/01 17:29:41 ** 
+21/11/01 17:29:41 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:29:41 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65
+21/11/01 17:29:41 **     Gracias
+21/11/01 17:29:41 ** --- MESSAGE END ---
+21/11/01 17:29:41 ** Connecting to smtp.gmail.com:465
+21/11/01 17:29:41 ** Connected.
+21/11/01 17:29:41 << 220 smtp.gmail.com ESMTP l20sm18929897wmq.42 - gsmtp<EOL>
+21/11/01 17:29:41 >> EHLO localhost<EOL>
+21/11/01 17:29:41 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:29:41 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:29:41 >> AUTH LOGIN<EOL>
+21/11/01 17:29:41 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:29:41 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:29:41 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:29:41 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:29:42 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:29:42 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:29:42 << 250 2.1.0 OK l20sm18929897wmq.42 - gsmtp<EOL>
+21/11/01 17:29:42 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:29:42 << 250 2.1.5 OK l20sm18929897wmq.42 - gsmtp<EOL>
+21/11/01 17:29:42 >> DATA<EOL>
+21/11/01 17:29:42 << 354  Go ahead l20sm18929897wmq.42 - gsmtp<EOL>
+21/11/01 17:29:42 >> Date: Mon, 1 Nov 2021 17:29:42 +0100<EOL>
+21/11/01 17:29:42 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:29:42 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:29:42 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:29:42 >> MIME-Version: 1.0<EOL>
+21/11/01 17:29:42 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:29:42 >> <EOL>
+21/11/01 17:29:42 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:29:42 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65<EOL>
+21/11/01 17:29:42 >>     Gracias<EOL>
+21/11/01 17:29:42 >> .<EOL>
+21/11/01 17:29:42 << 250 2.0.0 OK  1635784182 l20sm18929897wmq.42 - gsmtp<EOL>
+21/11/01 17:29:42 >> QUIT<EOL>
+21/11/01 17:29:42 << 221 2.0.0 closing connection l20sm18929897wmq.42 - gsmtp<EOL>
+21/11/01 17:29:42 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:29:42 ** Disconnected.
+21/11/01 17:29:42 ** Disconnected.
+21/11/01 17:33:07 ** --- MESSAGE BEGIN ---
+21/11/01 17:33:07 ** To: cesferort99@gmail.com
+21/11/01 17:33:07 ** Subject: Publicidad de Subastas.com
+21/11/01 17:33:07 ** From: phpalas4am@gmail.com
+21/11/01 17:33:07 ** MIME-Version: 1.0
+21/11/01 17:33:07 ** Content-type: text/html; charset=utf-8
+21/11/01 17:33:07 ** 
+21/11/01 17:33:07 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:33:08 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57
+21/11/01 17:33:08 **     Gracias
+21/11/01 17:33:08 ** --- MESSAGE END ---
+21/11/01 17:33:08 ** Connecting to smtp.gmail.com:465
+21/11/01 17:33:08 ** Connected.
+21/11/01 17:33:08 << 220 smtp.gmail.com ESMTP u20sm28711wmq.3 - gsmtp<EOL>
+21/11/01 17:33:08 >> EHLO localhost<EOL>
+21/11/01 17:33:08 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:33:08 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:33:08 >> AUTH LOGIN<EOL>
+21/11/01 17:33:08 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:33:08 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:33:08 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:33:08 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:33:08 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:33:08 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:33:08 << 250 2.1.0 OK u20sm28711wmq.3 - gsmtp<EOL>
+21/11/01 17:33:08 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:33:08 << 250 2.1.5 OK u20sm28711wmq.3 - gsmtp<EOL>
+21/11/01 17:33:08 >> DATA<EOL>
+21/11/01 17:33:08 << 354  Go ahead u20sm28711wmq.3 - gsmtp<EOL>
+21/11/01 17:33:08 >> Date: Mon, 1 Nov 2021 17:33:08 +0100<EOL>
+21/11/01 17:33:08 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:33:08 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:33:08 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:33:08 >> MIME-Version: 1.0<EOL>
+21/11/01 17:33:08 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:33:08 >> <EOL>
+21/11/01 17:33:08 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:33:08 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=57<EOL>
+21/11/01 17:33:08 >>     Gracias<EOL>
+21/11/01 17:33:08 >> .<EOL>
+21/11/01 17:33:09 << 250 2.0.0 OK  1635784389 u20sm28711wmq.3 - gsmtp<EOL>
+21/11/01 17:33:09 >> QUIT<EOL>
+21/11/01 17:33:09 << 221 2.0.0 closing connection u20sm28711wmq.3 - gsmtp<EOL>
+21/11/01 17:33:09 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:33:09 ** Disconnected.
+21/11/01 17:33:09 ** Disconnected.
+21/11/01 17:33:09 ** --- MESSAGE BEGIN ---
+21/11/01 17:33:09 ** To: cesferort99@gmail.com
+21/11/01 17:33:09 ** Subject: Publicidad de Subastas.com
+21/11/01 17:33:09 ** From: phpalas4am@gmail.com
+21/11/01 17:33:09 ** MIME-Version: 1.0
+21/11/01 17:33:09 ** Content-type: text/html; charset=utf-8
+21/11/01 17:33:09 ** 
+21/11/01 17:33:09 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:33:09 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65
+21/11/01 17:33:09 **     Gracias
+21/11/01 17:33:09 ** --- MESSAGE END ---
+21/11/01 17:33:09 ** Connecting to smtp.gmail.com:465
+21/11/01 17:33:09 ** Connected.
+21/11/01 17:33:10 << 220 smtp.gmail.com ESMTP f15sm4897652wrt.26 - gsmtp<EOL>
+21/11/01 17:33:10 >> EHLO localhost<EOL>
+21/11/01 17:33:10 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:33:10 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:33:10 >> AUTH LOGIN<EOL>
+21/11/01 17:33:10 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:33:10 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:33:10 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:33:10 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:33:10 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:33:10 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:33:10 << 250 2.1.0 OK f15sm4897652wrt.26 - gsmtp<EOL>
+21/11/01 17:33:10 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:33:10 << 250 2.1.5 OK f15sm4897652wrt.26 - gsmtp<EOL>
+21/11/01 17:33:10 >> DATA<EOL>
+21/11/01 17:33:10 << 354  Go ahead f15sm4897652wrt.26 - gsmtp<EOL>
+21/11/01 17:33:10 >> Date: Mon, 1 Nov 2021 17:33:10 +0100<EOL>
+21/11/01 17:33:10 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:33:10 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:33:10 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:33:10 >> MIME-Version: 1.0<EOL>
+21/11/01 17:33:10 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:33:10 >> <EOL>
+21/11/01 17:33:10 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:33:10 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php/?idItem=65<EOL>
+21/11/01 17:33:10 >>     Gracias<EOL>
+21/11/01 17:33:10 >> .<EOL>
+21/11/01 17:33:10 << 250 2.0.0 OK  1635784391 f15sm4897652wrt.26 - gsmtp<EOL>
+21/11/01 17:33:10 >> QUIT<EOL>
+21/11/01 17:33:10 << 221 2.0.0 closing connection f15sm4897652wrt.26 - gsmtp<EOL>
+21/11/01 17:33:10 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:33:10 ** Disconnected.
+21/11/01 17:33:10 ** Disconnected.
+21/11/01 17:35:55 ** --- MESSAGE BEGIN ---
+21/11/01 17:35:55 ** To: cesferort99@gmail.com
+21/11/01 17:35:55 ** Subject: Publicidad de Subastas.com
+21/11/01 17:35:55 ** From: phpalas4am@gmail.com
+21/11/01 17:35:55 ** MIME-Version: 1.0
+21/11/01 17:35:55 ** Content-type: text/html; charset=utf-8
+21/11/01 17:35:55 ** 
+21/11/01 17:35:55 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:35:55 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=57
+21/11/01 17:35:55 **     Gracias
+21/11/01 17:35:55 ** --- MESSAGE END ---
+21/11/01 17:35:55 ** Connecting to smtp.gmail.com:465
+21/11/01 17:35:55 ** Connected.
+21/11/01 17:35:55 << 220 smtp.gmail.com ESMTP b9sm8216749wrx.24 - gsmtp<EOL>
+21/11/01 17:35:55 >> EHLO localhost<EOL>
+21/11/01 17:35:55 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:35:55 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:35:55 >> AUTH LOGIN<EOL>
+21/11/01 17:35:55 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:35:55 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:35:55 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:35:55 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:35:56 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:35:56 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:35:56 << 250 2.1.0 OK b9sm8216749wrx.24 - gsmtp<EOL>
+21/11/01 17:35:56 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:35:56 << 250 2.1.5 OK b9sm8216749wrx.24 - gsmtp<EOL>
+21/11/01 17:35:56 >> DATA<EOL>
+21/11/01 17:35:56 << 354  Go ahead b9sm8216749wrx.24 - gsmtp<EOL>
+21/11/01 17:35:56 >> Date: Mon, 1 Nov 2021 17:35:56 +0100<EOL>
+21/11/01 17:35:56 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:35:56 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:35:56 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:35:56 >> MIME-Version: 1.0<EOL>
+21/11/01 17:35:56 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:35:56 >> <EOL>
+21/11/01 17:35:56 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:35:56 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=57<EOL>
+21/11/01 17:35:56 >>     Gracias<EOL>
+21/11/01 17:35:56 >> .<EOL>
+21/11/01 17:35:56 << 250 2.0.0 OK  1635784556 b9sm8216749wrx.24 - gsmtp<EOL>
+21/11/01 17:35:56 >> QUIT<EOL>
+21/11/01 17:35:56 << 221 2.0.0 closing connection b9sm8216749wrx.24 - gsmtp<EOL>
+21/11/01 17:35:56 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:35:56 ** Disconnected.
+21/11/01 17:35:56 ** Disconnected.
+21/11/01 17:35:56 ** --- MESSAGE BEGIN ---
+21/11/01 17:35:56 ** To: cesferort99@gmail.com
+21/11/01 17:35:56 ** Subject: Publicidad de Subastas.com
+21/11/01 17:35:56 ** From: phpalas4am@gmail.com
+21/11/01 17:35:56 ** MIME-Version: 1.0
+21/11/01 17:35:56 ** Content-type: text/html; charset=utf-8
+21/11/01 17:35:56 ** 
+21/11/01 17:35:56 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:35:56 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=61
+21/11/01 17:35:56 **     Gracias
+21/11/01 17:35:56 ** --- MESSAGE END ---
+21/11/01 17:35:56 ** Connecting to smtp.gmail.com:465
+21/11/01 17:35:57 ** Connected.
+21/11/01 17:35:57 << 220 smtp.gmail.com ESMTP v4sm14213755wrs.86 - gsmtp<EOL>
+21/11/01 17:35:57 >> EHLO localhost<EOL>
+21/11/01 17:35:57 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:35:57 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:35:57 >> AUTH LOGIN<EOL>
+21/11/01 17:35:57 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:35:57 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:35:57 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:35:57 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:35:57 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:35:57 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:35:57 << 250 2.1.0 OK v4sm14213755wrs.86 - gsmtp<EOL>
+21/11/01 17:35:57 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:35:57 << 250 2.1.5 OK v4sm14213755wrs.86 - gsmtp<EOL>
+21/11/01 17:35:57 >> DATA<EOL>
+21/11/01 17:35:57 << 354  Go ahead v4sm14213755wrs.86 - gsmtp<EOL>
+21/11/01 17:35:57 >> Date: Mon, 1 Nov 2021 17:35:57 +0100<EOL>
+21/11/01 17:35:57 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:35:57 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:35:57 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:35:57 >> MIME-Version: 1.0<EOL>
+21/11/01 17:35:57 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:35:57 >> <EOL>
+21/11/01 17:35:57 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:35:57 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=61<EOL>
+21/11/01 17:35:57 >>     Gracias<EOL>
+21/11/01 17:35:57 >> .<EOL>
+21/11/01 17:35:58 << 250 2.0.0 OK  1635784558 v4sm14213755wrs.86 - gsmtp<EOL>
+21/11/01 17:35:58 >> QUIT<EOL>
+21/11/01 17:35:58 << 221 2.0.0 closing connection v4sm14213755wrs.86 - gsmtp<EOL>
+21/11/01 17:35:58 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:35:58 ** Disconnected.
+21/11/01 17:35:58 ** Disconnected.
+21/11/01 17:35:58 ** --- MESSAGE BEGIN ---
+21/11/01 17:35:58 ** To: cesferort99@gmail.com
+21/11/01 17:35:58 ** Subject: Publicidad de Subastas.com
+21/11/01 17:35:58 ** From: phpalas4am@gmail.com
+21/11/01 17:35:58 ** MIME-Version: 1.0
+21/11/01 17:35:58 ** Content-type: text/html; charset=utf-8
+21/11/01 17:35:58 ** 
+21/11/01 17:35:58 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:35:58 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=63
+21/11/01 17:35:58 **     Gracias
+21/11/01 17:35:58 ** --- MESSAGE END ---
+21/11/01 17:35:58 ** Connecting to smtp.gmail.com:465
+21/11/01 17:35:58 ** Connected.
+21/11/01 17:35:58 << 220 smtp.gmail.com ESMTP f3sm22273wmb.12 - gsmtp<EOL>
+21/11/01 17:35:58 >> EHLO localhost<EOL>
+21/11/01 17:35:58 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:35:58 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:35:58 >> AUTH LOGIN<EOL>
+21/11/01 17:35:58 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:35:58 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:35:58 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:35:58 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:35:59 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:35:59 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:35:59 << 250 2.1.0 OK f3sm22273wmb.12 - gsmtp<EOL>
+21/11/01 17:35:59 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:35:59 << 250 2.1.5 OK f3sm22273wmb.12 - gsmtp<EOL>
+21/11/01 17:35:59 >> DATA<EOL>
+21/11/01 17:35:59 << 354  Go ahead f3sm22273wmb.12 - gsmtp<EOL>
+21/11/01 17:35:59 >> Date: Mon, 1 Nov 2021 17:35:59 +0100<EOL>
+21/11/01 17:35:59 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:35:59 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:35:59 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:35:59 >> MIME-Version: 1.0<EOL>
+21/11/01 17:35:59 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:35:59 >> <EOL>
+21/11/01 17:35:59 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:35:59 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=63<EOL>
+21/11/01 17:35:59 >>     Gracias<EOL>
+21/11/01 17:35:59 >> .<EOL>
+21/11/01 17:35:59 << 250 2.0.0 OK  1635784559 f3sm22273wmb.12 - gsmtp<EOL>
+21/11/01 17:35:59 >> QUIT<EOL>
+21/11/01 17:35:59 << 221 2.0.0 closing connection f3sm22273wmb.12 - gsmtp<EOL>
+21/11/01 17:35:59 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:35:59 ** Disconnected.
+21/11/01 17:35:59 ** Disconnected.
+21/11/01 17:35:59 ** --- MESSAGE BEGIN ---
+21/11/01 17:35:59 ** To: cesferort99@gmail.com
+21/11/01 17:35:59 ** Subject: Publicidad de Subastas.com
+21/11/01 17:35:59 ** From: phpalas4am@gmail.com
+21/11/01 17:35:59 ** MIME-Version: 1.0
+21/11/01 17:35:59 ** Content-type: text/html; charset=utf-8
+21/11/01 17:35:59 ** 
+21/11/01 17:35:59 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:35:59 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=65
+21/11/01 17:35:59 **     Gracias
+21/11/01 17:35:59 ** --- MESSAGE END ---
+21/11/01 17:35:59 ** Connecting to smtp.gmail.com:465
+21/11/01 17:36:00 ** Connected.
+21/11/01 17:36:00 << 220 smtp.gmail.com ESMTP h3sm5068258wrv.69 - gsmtp<EOL>
+21/11/01 17:36:00 >> EHLO localhost<EOL>
+21/11/01 17:36:00 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:36:00 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:36:00 >> AUTH LOGIN<EOL>
+21/11/01 17:36:00 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:36:00 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:36:00 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:36:00 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:36:00 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:36:00 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:36:00 << 250 2.1.0 OK h3sm5068258wrv.69 - gsmtp<EOL>
+21/11/01 17:36:00 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:36:00 << 250 2.1.5 OK h3sm5068258wrv.69 - gsmtp<EOL>
+21/11/01 17:36:00 >> DATA<EOL>
+21/11/01 17:36:00 << 354  Go ahead h3sm5068258wrv.69 - gsmtp<EOL>
+21/11/01 17:36:00 >> Date: Mon, 1 Nov 2021 17:36:00 +0100<EOL>
+21/11/01 17:36:00 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:36:00 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:36:00 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:36:00 >> MIME-Version: 1.0<EOL>
+21/11/01 17:36:00 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:36:00 >> <EOL>
+21/11/01 17:36:00 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:36:00 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=65<EOL>
+21/11/01 17:36:00 >>     Gracias<EOL>
+21/11/01 17:36:00 >> .<EOL>
+21/11/01 17:36:01 << 250 2.0.0 OK  1635784561 h3sm5068258wrv.69 - gsmtp<EOL>
+21/11/01 17:36:01 >> QUIT<EOL>
+21/11/01 17:36:01 << 221 2.0.0 closing connection h3sm5068258wrv.69 - gsmtp<EOL>
+21/11/01 17:36:01 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:36:01 ** Disconnected.
+21/11/01 17:36:01 ** Disconnected.
+21/11/01 17:36:01 ** --- MESSAGE BEGIN ---
+21/11/01 17:36:01 ** To: cesferort99@gmail.com
+21/11/01 17:36:01 ** Subject: Publicidad de Subastas.com
+21/11/01 17:36:01 ** From: phpalas4am@gmail.com
+21/11/01 17:36:01 ** MIME-Version: 1.0
+21/11/01 17:36:01 ** Content-type: text/html; charset=utf-8
+21/11/01 17:36:01 ** 
+21/11/01 17:36:01 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:36:01 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=68
+21/11/01 17:36:01 **     Gracias
+21/11/01 17:36:01 ** --- MESSAGE END ---
+21/11/01 17:36:01 ** Connecting to smtp.gmail.com:465
+21/11/01 17:36:01 ** Connected.
+21/11/01 17:36:01 << 220 smtp.gmail.com ESMTP s3sm14359080wrm.40 - gsmtp<EOL>
+21/11/01 17:36:01 >> EHLO localhost<EOL>
+21/11/01 17:36:01 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:36:01 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:36:01 >> AUTH LOGIN<EOL>
+21/11/01 17:36:01 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:36:01 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:36:01 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:36:01 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:36:01 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:36:01 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:36:01 << 250 2.1.0 OK s3sm14359080wrm.40 - gsmtp<EOL>
+21/11/01 17:36:01 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:36:02 << 250 2.1.5 OK s3sm14359080wrm.40 - gsmtp<EOL>
+21/11/01 17:36:02 >> DATA<EOL>
+21/11/01 17:36:02 << 354  Go ahead s3sm14359080wrm.40 - gsmtp<EOL>
+21/11/01 17:36:02 >> Date: Mon, 1 Nov 2021 17:36:02 +0100<EOL>
+21/11/01 17:36:02 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:36:02 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:36:02 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:36:02 >> MIME-Version: 1.0<EOL>
+21/11/01 17:36:02 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:36:02 >> <EOL>
+21/11/01 17:36:02 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:36:02 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=68<EOL>
+21/11/01 17:36:02 >>     Gracias<EOL>
+21/11/01 17:36:02 >> .<EOL>
+21/11/01 17:36:02 << 250 2.0.0 OK  1635784562 s3sm14359080wrm.40 - gsmtp<EOL>
+21/11/01 17:36:02 >> QUIT<EOL>
+21/11/01 17:36:02 << 221 2.0.0 closing connection s3sm14359080wrm.40 - gsmtp<EOL>
+21/11/01 17:36:02 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:36:02 ** Disconnected.
+21/11/01 17:36:02 ** Disconnected.
+21/11/01 17:37:19 ** --- MESSAGE BEGIN ---
+21/11/01 17:37:19 ** To: cesferort99@gmail.com
+21/11/01 17:37:19 ** Subject: Publicidad de Subastas.com
+21/11/01 17:37:19 ** From: phpalas4am@gmail.com
+21/11/01 17:37:19 ** MIME-Version: 1.0
+21/11/01 17:37:19 ** Content-type: text/html; charset=utf-8
+21/11/01 17:37:19 ** 
+21/11/01 17:37:19 **     Hola, haznos publicidad de esta mierda:
+21/11/01 17:37:19 **     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=65
+21/11/01 17:37:19 **     Gracias
+21/11/01 17:37:19 ** --- MESSAGE END ---
+21/11/01 17:37:19 ** Connecting to smtp.gmail.com:465
+21/11/01 17:37:19 ** Connected.
+21/11/01 17:37:19 << 220 smtp.gmail.com ESMTP j134sm37840wmj.3 - gsmtp<EOL>
+21/11/01 17:37:19 >> EHLO localhost<EOL>
+21/11/01 17:37:19 << 250-smtp.gmail.com at your service, [85.87.253.175]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/11/01 17:37:19 ** Authenticating as phpalas4am@gmail.com
+21/11/01 17:37:19 >> AUTH LOGIN<EOL>
+21/11/01 17:37:19 << 334 VXNlcm5hbWU6<EOL>
+21/11/01 17:37:19 >> cGhwYWxhczRhbUBnbWFpbC5jb20=<EOL>
+21/11/01 17:37:19 << 334 UGFzc3dvcmQ6<EOL>
+21/11/01 17:37:19 >> cGhwYWxhczRhbTEyMzQ=<EOL>
+21/11/01 17:37:19 << 235 2.7.0 Accepted<EOL>
+21/11/01 17:37:19 >> MAIL FROM: <phpalas4am@gmail.com><EOL>
+21/11/01 17:37:19 << 250 2.1.0 OK j134sm37840wmj.3 - gsmtp<EOL>
+21/11/01 17:37:19 >> RCPT TO: <cesferort99@gmail.com><EOL>
+21/11/01 17:37:19 << 250 2.1.5 OK j134sm37840wmj.3 - gsmtp<EOL>
+21/11/01 17:37:19 >> DATA<EOL>
+21/11/01 17:37:19 << 354  Go ahead j134sm37840wmj.3 - gsmtp<EOL>
+21/11/01 17:37:19 >> Date: Mon, 1 Nov 2021 17:37:19 +0100<EOL>
+21/11/01 17:37:19 >> To: cesferort99@gmail.com<EOL>
+21/11/01 17:37:19 >> Subject: Publicidad de Subastas.com<EOL>
+21/11/01 17:37:19 >> From: phpalas4am@gmail.com<EOL>
+21/11/01 17:37:19 >> MIME-Version: 1.0<EOL>
+21/11/01 17:37:19 >> Content-type: text/html; charset=utf-8<EOL>
+21/11/01 17:37:19 >> <EOL>
+21/11/01 17:37:19 >>     Hola, haznos publicidad de esta mierda:<EOL>
+21/11/01 17:37:19 >>     http://localhost/DWES/Tema3/Subastas/views/itemdetalles.php?idItem=65<EOL>
+21/11/01 17:37:19 >>     Gracias<EOL>
+21/11/01 17:37:19 >> .<EOL>
+21/11/01 17:37:20 << 250 2.0.0 OK  1635784640 j134sm37840wmj.3 - gsmtp<EOL>
+21/11/01 17:37:20 >> QUIT<EOL>
+21/11/01 17:37:20 << 221 2.0.0 closing connection j134sm37840wmj.3 - gsmtp<EOL>
+21/11/01 17:37:20 ** Disconnecting from smtp.gmail.com:465
+21/11/01 17:37:20 ** Disconnected.
+21/11/01 17:37:20 ** Disconnected.
