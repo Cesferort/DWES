@@ -5,6 +5,7 @@ require_once "../BD/gestorBD_usuario.php";
 $userVerified=false;
 if(isset($_GET["emailUser"]) && isset($_GET["codVerificacion"]))
 {
+    // Recuperamos correo y código de verificación
     $codVerificacion=urldecode($_GET["codVerificacion"]);
     $emailUser=urldecode($_GET["emailUser"]);
 

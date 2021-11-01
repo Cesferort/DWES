@@ -4,20 +4,25 @@ require_once "../BD/gestorBD_categoria.php";
 require_once "../BD/gestorBD_item.php";
 
 $_SESSION["puntoPartida"]="./nuevoitem.php";
+// No se permite el uso de la página a usuarios que no hayan iniciado sesión
 if(!isset($_SESSION['nomUser']) || !isset($_SESSION['idUser'])) 
     header("Location: ./login.php");
 
+// Recuperamos todas las categorias encontradas en la base de datos
 $listaCategories=getCategories($conn);
 
+// Valores lógicos que utilizaremos para comprobar el resultado de diferentes validaciones
 $nomItemValido=true;
 $fechaValida=true;
 $precioValido=true;
+// Comprobamos si el usuario ha deseado crear un nuevo item
 if(isset($_POST["enviarNuevoItem"]))
 {
     $selectCategoria=$_POST["selectCategoria"];
     $categoryFound=false;
     for($i=0; $i < count($listaCategories) && $categoryFound == false; $i++)
     {
+        // Recuperamos identificador y nombre de la categoría escogida
         $idCategory=$listaCategories[$i]["id"];
         $nomCategory=$listaCategories[$i]["categoria"];
         if($nomCategory == $selectCategoria)
@@ -35,6 +40,7 @@ if(isset($_POST["enviarNuevoItem"]))
 
     $precioItem=$_POST["precioItem"];
 
+    // Validamos que el usuario no haya metido un nombre de item vacío
     if($nomItem == "")
         $nomItemValido=false;
 
@@ -44,6 +50,7 @@ if(isset($_POST["enviarNuevoItem"]))
     $horaActual=date("H");
     $minActual=date("i");
     
+    // Validamos fecha
     if($anioActual == $selectAnioFin)
     {
         if($mesActual > $selectMesFin)
@@ -65,9 +72,12 @@ if(isset($_POST["enviarNuevoItem"]))
         }
     }
 
+    // Validamos precio del item
     if(!is_numeric($precioItem))
         $precioValido=false;
 
+    // En caso de que todos los datos hayan sido validados correctamente procedemos a insertar
+    // el nuevo item en la base de datos y redirigimos al usuario
     if($nomItemValido == true && $fechaValida == true && $precioValido ==true)
     {
         $idItem=addItem($conn, $idCategory, $_SESSION["idUser"], $nomItem, $precioItem, $descItem, $fechaFin);

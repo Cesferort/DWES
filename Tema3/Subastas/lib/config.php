@@ -3,12 +3,12 @@
 date_default_timezone_set('Europe/Andorra');
 
 // Host, usuario y contraseña para acceso al servidor MySQL
-define("DB_HOST" , "localhost");
-define("DB_USER" , "root");
-define("DB_PASSWORD" , "");
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
 
 // Nombre de la base de datos en MySQL
-define("DB" , "subastas");
+define("DB", "subastas");
 
 // Nombre del foro de subastas
 define("FORUM_TITLE", "Subastas.com");

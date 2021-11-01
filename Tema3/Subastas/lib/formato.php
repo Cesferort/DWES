@@ -6,7 +6,7 @@
  * @param double $money             Valor numérico que representa una cantidad de dinero
  * @return string                   Dinero con el formato correcto aplicado
  */
-function formatMoney($money)
+function formatMoney($money) 
 {
     // Convertirmos el valor recibido a texto y lo seccionamos para trabajar con sus partes
     $moneySeccionado=explode('.', "".$money);

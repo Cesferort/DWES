@@ -1,3 +1,4 @@
+<!-- Archivo ofrecido por el profesor. Posteriormente modificado para añadir funcionalidad -->
 <?php 
 require_once "../lib/config.php";
 
@@ -24,10 +25,12 @@ function conectarBD()
     <div id="menu">
         <a href="index.php">Home</a>
         <?php
+        // Comprobamos si el usuario ha iniciado sesión
         if(isset($_SESSION['nomUser']) && isset($_SESSION['idUser'])) 
         {
             echo "<a href='logout.php'>Logout </a>";
             echo "<a href='./nuevoitem.php'>Nuevo item</a>";
+            // Comprobamos si el usuario es admin
             if("admin" == $_SESSION["nomUser"])
             {
                 echo "<a href='./vencidas.php'> Subastas vencidas</a>";

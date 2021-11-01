@@ -1,3 +1,4 @@
+<!-- Archivo ofrecido por el profesor -->
 <?php
 $catsql = "SELECT * FROM categoria ORDER BY categoria ASC;";
 $catresult = mysqli_query($conn,$catsql);

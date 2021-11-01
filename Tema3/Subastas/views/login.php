@@ -8,10 +8,12 @@ if(isset($_POST["login"]))
     $nomUser=$_POST["nomUser"];
     $passUser=$_POST["passUser"];
     
+    // Se procede a iniciar sesión con los datos introducidos
     $datosLogin=login($conn, $nomUser, $passUser);
     $datosValidos=$datosLogin[0];
     if($datosValidos==1)
     {
+        // Guardamos en la sesión información sobre el usuario
         $_SESSION["nomUser"]=$nomUser;
         $_SESSION["idUser"]=$datosLogin[1];
 
@@ -23,8 +25,10 @@ if(isset($_POST["login"]))
 ?>
 <body>
     <?php
+    // Comprobamos si el intento de inicio de sesión ha sido fallido
     if(!isset($_POST["login"]) || $datosValidos != 1)
     {
+        // Mostramos diferentes errores en base al tipo de error
         if($datosValidos==-1)
             echo "<p style='color:red'>Login incorrecto. Inténtalo de nuevo!</p>";
         else if($datosValidos==0)

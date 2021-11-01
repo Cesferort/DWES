@@ -2,20 +2,25 @@
 require_once "cabecera.php";
 require_once "../BD/gestorBD_usuario.php";
 
+// Valores lógicos que nos ayudarán a conocer el resultado de diferentes validaciones
 $checkPassword=true;
 $checkUserNotExists=true;
 $newUserInDB=false;
+// Comprobamos si el usuario ha deseado registrar una nueva cuenta
 if(isset($_POST["registerUser"]))
 {
+    // Validamos contraseña
     $passUser=$_POST["passUser"];
     $passUserCheck=$_POST["passUserCheck"];
     if($passUser==$passUserCheck)
     {
         $nomUser=$_POST["nomUser"];
+        // Comprobamos si existe otro usuario que haya eligo el mismo nombre de usuario
         if(!userExists($conn, $nomUser))
         {
             $fullName=$_POST["fullName"];
             $emailUser=$_POST["emailUser"];
+            // Añadimos el nuevo usuario a al base de dato
             $newUserInDB=addUser($conn, $nomUser, $fullName, $passUser, $emailUser);
         }
         else 
@@ -68,6 +73,7 @@ if(isset($_POST["registerUser"]))
     </form>
     <?php
     }
+    // Comprobamos si el registro del nuevo usuario se completo correctamente y lo mostramos
     else if($newUserInDB==true)
         echo "<p>Registro completado. Comprueba tu correo para activar la cuenta.</p>";
     else 

@@ -1,4 +1,11 @@
 <?php
+/**
+ * Añade una imagen relacionada a un item existente a la base de datos.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $idItem            Identificador del item cuya imagen debemos añadir
+ * @param string $imagen            Imagen que se desea añadir a la base de datos
+ * @return boolean                  Valor lógico que representa si la inserción se ha realizado correctamente o no
+ */
 function addImagen($conn, $idItem, $imagen)
 {
     $queryImagen="INSERT INTO imagen(id_item, imagen) VALUES(?,?);";
@@ -14,6 +21,16 @@ function addImagen($conn, $idItem, $imagen)
     else 
         return false;
 }
+
+/**
+ * Elimina una imagen de la base de datos. Para esto recibe el identificador del item al que
+ * está asociada y el valor del campo imagen.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $idItem            Identificador del item cuya imagen debemos eliminar
+ * @param string $deletePathImg     Valor del campo imagen en la tabla imagen
+ * @return boolean                  Valor lógico que representa si la eliminación se realizó 
+ *                                  correctamente o no
+ */
 function deleteImagen($conn, $idItem, $deletePathImg)
 {
     $f="../images/".$deletePathImg;
@@ -32,6 +49,7 @@ function deleteImagen($conn, $idItem, $deletePathImg)
     else 
         return false;
 }
+
 /**
  * Busca en la base de datos la imagen asociada al item deseado y devuelve su dirección. La base puede 
  * guardar múltiples imágenes asociadas al un item, en caso de ser así se devolvera el primer encuentro.

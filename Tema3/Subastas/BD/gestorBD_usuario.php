@@ -1,4 +1,13 @@
 <?php
+/**
+ * Se realiza un intento de inicio de sesión con los valores recibidos como parámetros.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $nomUser           Nombre del usuario cuya sesión queremos iniciar
+ * @param string $passUser          Contraseña introducida por el usuario que debemos validar
+ * @return array $datosResult       Colección de datos que muestra el resultado del intento de
+ *                                  inició de sesión, sus posibles errores y el identificador
+ *                                  del usuario
+ */
 function login($conn, $nomUser, $passUser)
 {
     $datosResult=[];
@@ -12,11 +21,11 @@ function login($conn, $nomUser, $passUser)
     if($stPrepared && $stExecuted) 
     {
         $stResult = $st -> get_result();
-        if($usuario = $stResult -> fetch_assoc()) 
+        if($usuario = $stResult -> fetch_assoc())       // Comprobamos si existe un usuario con el nombre y contraseñas introducidas
         {
-            if($usuario["activo"]==intval(true))
-                $datosResult[]=1;
-            else if($usuario["activo"]==intval(false))
+            if($usuario["activo"]==intval(true))        // Inicio de sesión correcto en una cuenta activada
+                $datosResult[]=1;                   
+            else if($usuario["activo"]==intval(false))  // Inicio de sesión correcto en una cuenta no activada
                 $datosResult[]=0;
         }
         else 
@@ -29,6 +38,13 @@ function login($conn, $nomUser, $passUser)
     return $datosResult;
 }
 
+/**
+ * Se comprueba si existe en la base de datos un usuario registrado con el nombre pasado
+ * como parámetro.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $nomUser           Nombre del usuario que deseamos buscar en la BD
+ * @return boolean                  Valor lógico que representa si el usuario existe o no en la BD
+ */
 function userExists($conn, $nomUser)
 {
     $queryUser="SELECT * FROM usuario WHERE username=?;";
@@ -53,6 +69,19 @@ function userExists($conn, $nomUser)
     return false;
 }
 
+/**
+ * Se añade un nuevo usuario a la base de datos. Para esto recibiremos todos los datos de 
+ * interés como parámetros. Para esto haremos uso de las funciones generateVerificationCode,
+ * que nos creará un código de verificación para el nuevo usuario, y sendVerificationCode,
+ * que se encargará de enviar el código de verificación por correo al usuario.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $nomUser           Nombre del usuario que deseamos insertar en la BD
+ * @param string $fullName          Nombre completo del usuario que deseamos buscar en la BD
+ * @param string $passUser          Contraseña del usuario que deseamos buscar en la BD
+ * @param string $emailUser         Email del usuario que deseamos buscar en la BD
+ * @return boolean                  Valor lógico que representa si la inserción del nuevo
+ *                                  usuario se ha realizado correctamente
+ */
 function addUser($conn, $nomUser, $fullName, $passUser, $emailUser)
 {
     // Generar código de verificación
@@ -72,6 +101,14 @@ function addUser($conn, $nomUser, $fullName, $passUser, $emailUser)
         return false;
 }
 
+/**
+ * Generamos un código de verificación aleatorio que posteriormente será enviado al correo de 
+ * un usuario que haya sido recientemente registrado. Gracias a este código podrá verificar
+ * su identidad y activar la cuenta. 
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param integer $size             Longitud del código de verificación
+ * @return string $result           Valor textual que representa el código generado
+ */
 function generateVerificationCode($size) 
 {
     $result='';
@@ -85,6 +122,16 @@ function generateVerificationCode($size)
     return $result;
 }
 
+/**
+ * Enviamos un código de verificación creado en la función generateVerificationCode por correo
+ * a un usuario. Gracias a este correo, el usuario activará su cuenta.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $nomUser           Nombre del usuario con el que debemos contactar
+ * @param string $codVerificacion   Código de verificación que debemos mandarle
+ * @param string $emailUser         Correo del usuario que debemos utilizar
+ * @return boolean                  Valor lógico que representa si el envío del código de 
+ *                                  verificación se ha enviado correctamente al destinatario
+ */
 function sendVerificationCode($nomUser, $codVerificacion, $emailUser)
 {
     $urlCadRandom=urlencode($codVerificacion);
@@ -104,6 +151,15 @@ function sendVerificationCode($nomUser, $codVerificacion, $emailUser)
     return mail($emailUser, $subject, $msg, $headers);
 }
 
+/**
+ * Verificamos identidad de un nuevo usuario en la base de datos y activamos su cuenta en caso
+ * de que la verificación sea correcta.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $codVerificacion   Código de verificación que debemos comprobar
+ * @param string $emailUser         Email del usuario que deseamos validar
+ * @return boolean                  Valor lógico que representa si la verificación del usuario
+ *                                  se ha realizado correctamente
+ */
 function verifyUser($conn, $codVerificacion, $emailUser)
 {
     $queryUser="SELECT * FROM usuario WHERE email=? AND cadenaverificacion=?;";
@@ -139,6 +195,12 @@ function verifyUser($conn, $codVerificacion, $emailUser)
     return false;
 }
 
+/**
+ * Retornamos un usuario gracias al identificador pasado como parámetro.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $idUser            Identificador del usuario que deseamos encontrar
+ * @return array                    Colección de datos que representa al usuario en la BD
+ */
 function getUserFromId($conn, $idUser)
 {
     $queryUser="SELECT * FROM usuario WHERE id=?;";

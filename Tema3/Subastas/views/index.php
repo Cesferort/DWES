@@ -28,6 +28,7 @@ $items=getItemsOfCategory($conn, $idCategoria);
         $txt="";
         for($i=0;$i<count($items);$i++)
         {
+            // Recuperamos toda la información de interés sobre el item
             $idItem=$items[$i]["id"];
             $src=getImageOfItem($conn, $idItem);
             $pujaData=getPujaDataOfItem($conn, $idItem);
@@ -43,11 +44,14 @@ $items=getItemsOfCategory($conn, $idCategoria);
             $fechaFin=$items[$i]["fechafin"];
 
             $txt.="<tr>";
-            if($src!="NA")
+            // Comprobamos si existe una imagen relacionada al item
+            if($src != "NA")
                 $txt.="<td><img src='".$src."' alt='".$nomItem."' width='100' height='100'></td>";
             else 
                 $txt.="<td>NO IMAGEN</td>";
 
+            // En caso de que el usuario haya iniciado sesión y sea el mismo usuario que creó el 
+            // item mostrado se le ofrecerá la posibilidad a editar sus detalles
             if(isset($_SESSION["idUser"]) && $id_user == $_SESSION["idUser"])
                 $txt.="<td><a href='itemdetalles.php?idItem=".$idItem."'>$nomItem</a> - <a href='./editaritem.php?idItem=$idItem'>[editar]</a></td>";
             else 

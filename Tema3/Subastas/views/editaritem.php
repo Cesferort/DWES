@@ -5,14 +5,18 @@ require_once "../BD/gestorBD_imagen.php";
 require_once "../BD/gestorBD_item.php";
 require_once "../BD/gestorBD_puja.php";
 
+// No se permite el uso de la página en caso de no recibir el identificador de un item cuyos
+// detos podremos editar
 if(!isset($_GET["idItem"]) && !isset($_POST["idItem"]))
     header("Location: ./index.php");
 
+// Recuperamos el identificador
 if(isset($_GET["idItem"]))
     $idItem=$_GET["idItem"];
 else if(isset($_POST["idItem"]))
     $idItem=$_POST["idItem"];
 
+// Recuperamos item de la base de datos gracias a su identificador
 $item=getItemById($conn, $idItem);
 
 $idItemUser=$item["id_user"];
@@ -26,12 +30,14 @@ $preciopartida=$item["preciopartida"];
 $descripcion=$item["descripcion"];
 $fechafin=$item["fechafin"];
 
+// Eliminamos imagen
 if(isset($_GET["deletePathImg"]))
 {
     $deletePathImg=$_GET["deletePathImg"];
     deleteImagen($conn, $idItem, $deletePathImg);
 }
 
+// Validamos nuevo precio y lo asignamos
 $cambioPrecioValido=true;
 if(isset($_POST["bajarPrecio"]) || isset($_POST["subirPrecio"]))
 {
@@ -48,6 +54,7 @@ if(isset($_POST["bajarPrecio"]) || isset($_POST["subirPrecio"]))
         $cambioPrecioValido=false;
 }
 
+// Cambiamos fecha de fin para las pujas
 if(isset($_POST["finPuja_aumentarHora"]) || isset($_POST["finPuja_aumentarDia"]))
 {
     if(isset($_POST["finPuja_aumentarHora"]))
@@ -65,6 +72,7 @@ if(isset($_POST["finPuja_aumentarHora"]) || isset($_POST["finPuja_aumentarDia"])
     setEndDateOfItem($conn, $idItem, $nuevaFechaFin);
 }
 
+// Guardamos imagen en el directorio images y subimos a la base de datos
 if(isset($_POST["subirImgItem"]))
 {    
     if(isset($_FILES["nuevaImgItem"]))
@@ -92,6 +100,8 @@ if(isset($_POST["subirImgItem"]))
     }
 }
 
+// Volvemos a recuperar el item para actualizar así su información por cualquier modificación
+// que haya podido ocurrir
 $item=getItemById($conn, $idItem);
 $nomItem=$item["nombre"];
 $preciopartida=$item["preciopartida"];
@@ -106,6 +116,8 @@ $fechafin=$item["fechafin"];
                 <td>Precio de salida: <?php echo formatMoney($preciopartida);?></td>
                 <td>
                     <?php
+                    // Mostramos posibilidad a modoficiar precio inicial solo en caso de que no
+                    // existan pujas sobre el item
                     if(getPujaDataOfItem($conn, $idItem)[0] == 0)
                     {
                         $html="<input type='text' name='cambioPrecio'>";
@@ -132,6 +144,7 @@ $fechafin=$item["fechafin"];
         <h2>Imágenes actuales</h2>
         <?php
         $listaImagenes=getImagesOfItem($conn, $idItem);
+        // Comprobamos que existan imágenes vinculadas al item
         if(count($listaImagenes) <= 0)
             echo "<p>No hay imágenes del item.</p>";
         else 

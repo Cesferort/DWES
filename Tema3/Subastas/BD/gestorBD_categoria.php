@@ -1,6 +1,6 @@
 <?php
 /**
- * Devuelve todas las categorías de item encontradas en la base de datos.
+ * Devuelve todas las categorías de item encontradas en la base de datos. 
  * @param mysqli $conn                  Conexión a la base de datos
  * @return array $resultCategories      Array de categorías de item
  */

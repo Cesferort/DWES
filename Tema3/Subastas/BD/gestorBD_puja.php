@@ -1,4 +1,15 @@
 <?php
+/**
+ * Se añade una nueva puja a la base de datos. Para ello recibe como parámetros todos los
+ * datos de interés que una puja contiene en la base.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param integer $idItem           Identificador del item asociado a la puja
+ * @param integer $idUser           Identificador del usuario asociado a la puja
+ * @param integer $double           Cantidad ofrecida por el usuario
+ * @param string $date              Fecha en la que se ha realizado la nueva puja
+ * @return boolean                  Valor lógico que representa si la inserción se ha
+ *                                  realizado correctamente
+ */
 function addPuja($conn, $idItem, $idUser, $cantidad, $date)
 {
     // Se inserta la nueva puja en la base de datos.
@@ -50,6 +61,13 @@ function getPujaDataOfItem($conn, $idItem)
     return $result;
 }
 
+/**
+ * Retorna todas las pujas relacionadas a un item en específico. Para esto recibe el
+ * identificador del item cuyas pujas se desea recuperar.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param integer $idItem           Identificador del item asociado a las pujas
+ * @return array $pujas             Lista de pujas relacionadas al item deseado
+ */
 function getPujasOfItem($conn, $idItem)
 {
     $pujas=[];
@@ -71,6 +89,15 @@ function getPujasOfItem($conn, $idItem)
     return $pujas;
 }
 
+/**
+ * Retorna todas las pujas relacionadas a un usuario en específico realizadas en cierta
+ * fecha. Para esto recibe el identificador del usuario cuyas pujas se desea recuperar
+ * y una fecha.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param integer $idUser           Identificador del usuario asociado a las pujas
+ * @param string $date              Fecha en la que se desea realizar la búsqueda
+ * @return array $pujas             Lista de pujas relacionadas al usuario y fecha deseados
+ */
 function getPujasOfUserFromToday($conn, $idUser, $date)
 {
     $pujas=[];
