@@ -1,17 +1,89 @@
 <?php
 // require_once "./mierda.php";
 // header("Location: ./sitio.php");
+
 /**
  * SQL QUERIES
  */
 // Select
+function getExpiredItems($conn)
+{
+    $resultItem=[];
+    // Se seledccionan los items cuya fecha fin de las pujas sea 1 segundo superior o más
+    // a la fecha actual
+    $queryItem="SELECT * FROM item WHERE TIMESTAMPDIFF(SECOND, fechafin, now()) > 1;";
 
-// Update
-
-// Delete
+    $st=$conn -> prepare($queryItem);
+    $stExecuted=$st -> execute();
+    // En caso de que la query se haya realizado correctamente recuperamos los resultados
+    if($stExecuted) 
+    {
+        $stResult=$st -> get_result();
+        while($item=$stResult -> fetch_assoc()) 
+            $resultItem[]=$item;
+    }
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    return $resultItem;
+}
 
 // Insert
+function addImagen($conn, $idItem, $imagen)
+{
+    $queryImagen="INSERT INTO imagen(id_item, imagen) VALUES(?,?);";
+    
+    $st=$conn -> prepare($queryImagen);
+    $stPrepared=$st -> bind_param("is", $idItem, $imagen); 
+    $stExecuted=$st -> execute();
+    
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    if($stPrepared && $stExecuted)
+        return true;
+    else 
+        return false;
+}
 
+// Update
+function setPriceOfItem($conn, $idItem, $nuevoPrecio)
+{
+    // Se activa al usuario en la base de datos
+    $queryItem="UPDATE item SET preciopartida = ? WHERE id = ?;";
+            
+    $st=$conn -> prepare($queryItem);
+    $stPrepared=$st -> bind_param("di", $nuevoPrecio, $idItem);
+    $stExecuted=$st -> execute();
+    
+    // Cerramos statement y devolvemos resultado
+    $st -> close();
+    if($stPrepared && $stExecuted)
+        return true;
+    else 
+        return false;
+}
+
+// Delete y Documentación
+/**
+ * Elimina un item de la base de datos y toda la información relacionada encontrable en las 
+ * tablas imagen y puja. Para esto recibe el identificador del mismo.
+ * @param mysqli $conn              Conexión a la base de datos
+ * @param string $idItem            Identificador del item a eliminar de la base de datos
+ * @return boolean                  Valor lógico que representa si la eliminación se ha 
+ *                                  completado correctamente
+ */
+function deleteItem($conn, $idItem)
+{
+    $queryItem="DELETE FROM item WHERE id=?";
+   
+    $st=$conn -> prepare($queryItem);
+    $stPrepared=$st -> bind_param("i", $idItem);
+    $stExecuted=$st -> execute();
+
+    // Cerramos statement y devolvemos resultado
+    if($stPrepared && $stExecuted)
+        return true;
+    return false;
+}
 
 
 
@@ -153,6 +225,19 @@ empty("texto");         // false
 is_numeric($input);
 
 join("mierda", $inputSeccionado);
+
+function generateRandomString($size) 
+{
+    $result='';
+    $permittedChars='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $length=strlen($permittedChars);
+    for($i=0; $i<$size; $i++) 
+    {
+        $random_character=$permittedChars[mt_rand(0, $length-1)];
+        $result.=$random_character;
+    }
+    return $result;
+}
 
 // Casting
 $output=intval($input);
