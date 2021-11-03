@@ -5,6 +5,24 @@
 /**
  * SQL QUERIES
  */
+define("FORUM_TITLE", "Subastas.com");
+define("BASE_ROUTE", "http://" . $_SERVER['SERVER_NAME']."/DWES/Tema3/Subastas/");
+define("CURRENCY", "€");
+define("DIR_IMAGES", BASE_ROUTE."images/");
+
+// Conn
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
+define("DB", "subastas");
+$conn=conectarBD();
+function conectarBD()
+{
+    $conn=new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+    mysqli_set_charset($conn, "UTF8");
+    return $conn;
+}
+
 // Select
 function getExpiredItems($conn)
 {
@@ -225,6 +243,9 @@ empty("texto");         // false
 is_numeric($input);
 
 join("mierda", $inputSeccionado);
+
+if(isset($_GET["codVerificacion"]))
+    $codVerificacion=urldecode($_GET["codVerificacion"]);
 
 function generateRandomString($size) 
 {

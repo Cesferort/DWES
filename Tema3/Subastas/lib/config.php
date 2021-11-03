@@ -1,6 +1,6 @@
 <?php 
-// Timezone Andorra
-date_default_timezone_set('Europe/Andorra');
+// Timezone Madrid
+date_default_timezone_set('Europe/Madrid');
 
 // Host, usuario y contraseña para acceso al servidor MySQL
 define("DB_HOST", "localhost");
