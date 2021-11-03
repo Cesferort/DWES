@@ -147,7 +147,8 @@ if(file_exists("./mierda.txt"))
 }
 
 // Move uploaded file
-if(isset($_FILES['fileMierda']))
+// if(isset($_FILES['fileMierda']))
+if(is_uploaded_file($_FILES['fileMierda']))
 {
     $file=$_FILES['fileMierda'];
     $target="./".$file['name'];
