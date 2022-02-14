@@ -16,6 +16,7 @@
             $nEjercicio=1;
             foreach($directories as $dir)
             {
+             
                 if(is_dir($dir))
                 {
                     $url='./'.$dir;
